@@ -1,0 +1,99 @@
+@{
+    ViewData["Title"] = "Chi Tiết Bài Viết";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/news.css">
+}
+
+<div class="breadcrumb">
+    <div class="container">
+        <a asp-controller="Home" asp-action="Index">Trang chủ</a><span>/</span><a asp-controller="News" asp-action="Index">Tin tức</a><span>/</span><strong>Chi tiết bài viết</strong>
+    </div>
+</div>
+
+<main class="section" style="padding-top: 30px;">
+    <div class="container">
+        <div class="post-layout">
+            <article class="post-main">
+                <img class="post-cover"
+                    src="~/image/news/article-demo-1.jpeg"
+                    alt="Hương Việt Sinh chăm sóc thế hệ trẻ bằng bữa ăn học đường ngon sạch">
+                <div class="post-body">
+                    <div class="meta-row">
+                        <span class="category-badge tag-activity">Hoạt động HVS</span>
+                        <span><i class="far fa-calendar"></i> 10/03/2026</span>
+                        <span><i class="far fa-user"></i> Ban Truyền Thông</span>
+                    </div>
+                    <h1>Hương Việt Sinh Chăm Sóc Thế Hệ Trẻ Bằng Bữa Ăn Học Đường Ngon Sạch</h1>
+
+                    <p class="post-lead"><em>Với 13 năm tận tâm, Công ty TNHH Hương Việt Sinh nỗ lực mang đến những bữa ăn học đường bổ dưỡng, góp phần nuôi dưỡng thế hệ trẻ khỏe về cả thể chất lẫn trí tuệ.</em></p>
+
+                    <h3>Bữa ăn học đường an toàn, ngon, bổ</h3>
+
+                    <p>Bà Vũ Lan Sinh, Chủ tịch công ty, chia sẻ: "Chúng tôi không chỉ muốn cung cấp thực phẩm mà còn mong mỗi bữa ăn là nền tảng cho sự phát triển toàn diện của học sinh".</p>
+
+                    <p>Với tầm nhìn này, công ty đã xây dựng một chuỗi cung ứng thực phẩm khép kín "từ trang trại đến bàn ăn", kết hợp với nghiên cứu dinh dưỡng chuyên sâu để tạo nên những thực đơn khoa học, phù hợp từng lứa tuổi.</p>
+
+                    <figure class="post-figure">
+                        <img src="~/image/news/article-demo-2.jpeg" alt="Dây chuyền chia thức ăn đảm bảo an toàn thực phẩm của Công ty TNHH Hương Việt Sinh">
+                        <figcaption>Dây chuyền chia thức ăn đảm bảo an toàn thực phẩm của Công ty TNHH Hương Việt Sinh.</figcaption>
+                    </figure>
+
+                    <p>Công ty TNHH Hương Việt Sinh chủ động đầu tư vào các trang trại tại Bắc Ninh và Bắc Giang, từ chăn nuôi gà lấy trứng, lợn thịt đến trồng rau sạch đạt chuẩn VietGap. Các sản phẩm chế biến như đậu phụ, giá đỗ, bún, bánh phở, xúc xích, giò chả, chả cá… đều đạt chứng nhận OCOP 4 sao của TP Hà Nội, đảm bảo nguồn gốc rõ ràng và chất lượng cao.</p>
+
+                    <figure class="post-figure">
+                        <img src="~/image/news/article-demo-3.jpeg" alt="Dây chuyền chia thức ăn đảm bảo an toàn thực phẩm">
+                        <figcaption>Dây chuyền chia thức ăn đảm bảo an toàn thực phẩm của Công ty TNHH Hương Việt Sinh.</figcaption>
+                    </figure>
+
+                    <p>Với hệ thống sản xuất khép kín, thực đơn khoa học và các chứng nhận quốc tế, công ty kỳ vọng là biểu tượng của chất lượng và trách nhiệm trong lĩnh vực thực phẩm.</p>
+
+                    <div class="share-row">
+                        <strong>Chia sẻ:</strong>
+                        <a class="share-btn" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a class="share-btn" href="#" aria-label="Zalo">Z</a>
+                        <a class="share-btn" href="#" aria-label="Link"><i class="fas fa-link"></i></a>
+                    </div>
+                </div>
+            </article>
+
+            <aside>
+                <div class="sidebar-box">
+                    <h3>Bài Viết Liên Quan</h3>
+                    <div class="related-item">
+                        <img src="~/image/news/hvs-chia-suat-an.jpg"
+                            alt="5 nhóm vi chất cần ưu tiên trong thực đơn cho trẻ tiểu học">
+                        <a asp-controller="News" asp-action="Detail">5 nhóm vi chất cần ưu tiên trong thực đơn cho trẻ tiểu học</a>
+                    </div>
+                    <div class="related-item">
+                        <img src="~/image/news/hvs-bua-an-hoc-sinh.jpg"
+                            alt="Thực đơn mẫu theo tuần - Cân bằng dinh dưỡng dễ áp dụng">
+                        <a asp-controller="News" asp-action="Detail">Thực đơn mẫu theo tuần: Cân bằng dinh dưỡng, dễ áp dụng</a>
+                    </div>
+                    <div class="related-item">
+                        <img src="~/image/news/hvs-quy-trinh-mot-chieu.jpg"
+                            alt="Vì sao quy trình bếp một chiều là tiêu chuẩn bắt buộc">
+                        <a asp-controller="News" asp-action="Detail">Vì sao quy trình bếp một chiều là tiêu chuẩn bắt buộc?</a>
+                    </div>
+                </div>
+
+                <div class="sidebar-box">
+                    <h3>Dịch Vụ Nổi Bật</h3>
+                    <a class="service-ad ad-meal" asp-controller="Services" asp-action="Catering">
+                        <strong>Suất ăn học đường</strong><br>
+                        Dinh dưỡng khoa học, an toàn mỗi ngày
+                    </a>
+                    <a class="service-ad ad-event" asp-controller="Services" asp-action="Events">
+                        <strong>Tổ chức sự kiện</strong><br>
+                        Giải pháp ẩm thực cho doanh nghiệp
+                    </a>
+                    <a class="service-ad ad-food" asp-controller="Services" asp-action="Products">
+                        <strong>Thực phẩm OCOP</strong><br>
+                        Nguồn gốc rõ ràng, kiểm soát chất lượng
+                    </a>
+                </div>
+            </aside>
+        </div>
+    </div>
+</main>

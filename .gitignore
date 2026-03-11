@@ -1,0 +1,10 @@
+bin/
+obj/
+.vs/
+*.user
+*.suo
+*.log
+.idea/
+*.swp
+HuongVietSinh.Web/wwwroot/image/news/demo/
+nul

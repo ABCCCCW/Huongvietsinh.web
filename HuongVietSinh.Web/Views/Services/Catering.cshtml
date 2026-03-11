@@ -1,0 +1,306 @@
+@{
+    ViewData["Title"] = "Cung Cấp Suất Ăn Học Đường";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/services.css">
+}
+
+<!-- Banner -->
+<section class="services-banner">
+    <div class="banner-overlay"></div>
+    <div class="container banner-content">
+        <h1 class="animate-fade-in">Cung Cấp Suất Ăn Học Đường</h1>
+        <p class="animate-fade-in" style="animation-delay: 0.2s">Bữa ăn học đường dinh dưỡng, an toàn</p>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+    <div class="container">
+        <a asp-controller="Home" asp-action="Index">Trang chủ</a>
+        <span>/</span>
+        <a asp-controller="Services" asp-action="Index">Dịch vụ</a>
+        <span>/</span>
+        <strong>Cung cấp suất ăn học đường</strong>
+    </div>
+</div>
+
+<!-- Zone 1: Tiêu chuẩn dinh dưỡng -->
+<section class="section nutrition-section">
+    <div class="container">
+        <div class="nutrition-grid">
+            <div class="nutrition-visual animate-fade-in">
+                <div class="nutrition-pyramid">
+                    <div class="pyramid-level">Đường, Dầu mỡ</div>
+                    <div class="pyramid-level">Sữa, Phô mai</div>
+                    <div class="pyramid-level">Thịt, Cá, Trứng, Đậu</div>
+                    <div class="pyramid-level">Rau củ, Trái cây</div>
+                    <div class="pyramid-level">Ngũ cốc, Cơm, Bánh mì</div>
+                </div>
+            </div>
+            <div class="nutrition-text animate-fade-in" style="animation-delay: 0.2s">
+                <h2>Tiêu Chuẩn Dinh Dưỡng</h2>
+                <p>Tại Hương Việt Sinh, chúng tôi tin rằng mỗi bữa ăn là một viên gạch xây dựng nên tương lai của các con. Dựa trên mô hình tháp dinh dưỡng cân đối, thực đơn tại các trường mầm non và tiểu học được thiết kế xoay vòng, không trùng lặp, đảm bảo sự hào hứng và ngon miệng trong từng bữa ăn.</p>
+                <p>Toàn bộ quy trình xây dựng thực đơn đều được duyệt bởi các chuyên viên dinh dưỡng giàu kinh nghiệm, tính toán kỹ lưỡng hàm lượng calo để phù hợp với từng độ tuổi phát triển của học sinh.</p>
+                <div class="highlight-box">
+                    <p><i class="fas fa-check-circle" style="color: var(--accent-color); margin-right: 8px;"></i> Thực đơn xoay vòng, không trùng lặp, duyệt bởi chuyên viên dinh dưỡng.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Zone 2: Quy trình bếp một chiều -->
+<section class="section process-kitchen-section">
+    <div class="container">
+        <h2 class="section-title">Quy Trình Bếp Một Chiều</h2>
+        <p class="process-kitchen-desc">Chúng tôi vận hành hệ thống bếp một chiều nghiêm ngặt để ngăn ngừa hoàn toàn nguy cơ nhiễm chéo, bảo vệ sức khỏe cho hàng vạn học sinh mỗi ngày. Quy trình được thực hiện theo dòng chảy một chiều khép kín.</p>
+
+        <div class="kitchen-flow">
+            <div class="kitchen-step">
+                <div class="kitchen-step-icon">
+                    <i class="fas fa-clipboard-check"></i>
+                </div>
+                <h4>Tiếp Nhận</h4>
+                <p>Kiểm tra chất lượng, nguồn gốc nguyên liệu đầu vào</p>
+            </div>
+            <div class="kitchen-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="kitchen-step">
+                <div class="kitchen-step-icon">
+                    <i class="fas fa-cut"></i>
+                </div>
+                <h4>Sơ Chế</h4>
+                <p>Khu ướt / khô tách biệt hoàn toàn</p>
+            </div>
+            <div class="kitchen-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="kitchen-step">
+                <div class="kitchen-step-icon">
+                    <i class="fas fa-fire"></i>
+                </div>
+                <h4>Chế Biến</h4>
+                <p>Bếp nấu chuyên nghiệp, kiểm soát nhiệt độ</p>
+            </div>
+            <div class="kitchen-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="kitchen-step">
+                <div class="kitchen-step-icon">
+                    <i class="fas fa-th-large"></i>
+                </div>
+                <h4>Chia Khay</h4>
+                <p>Khu vực sạch, đảm bảo vệ sinh tuyệt đối</p>
+            </div>
+            <div class="kitchen-arrow">
+                <i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="kitchen-step">
+                <div class="kitchen-step-icon">
+                    <i class="fas fa-truck"></i>
+                </div>
+                <h4>Vận Chuyển</h4>
+                <p>Xe đẩy giữ nhiệt, vận chuyển tới các điểm trường</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Zone 3: Thực đơn mẫu -->
+<section class="section menu-section">
+    <div class="container">
+        <h2 class="section-title">Thực Đơn Mẫu</h2>
+        <p class="section-subtitle">Lộ trình dinh dưỡng một tuần tại các trường tiểu học đối tác</p>
+
+        <div class="menu-tabs">
+            <button class="menu-tab active" data-day="mon">Thứ 2</button>
+            <button class="menu-tab" data-day="tue">Thứ 3</button>
+            <button class="menu-tab" data-day="wed">Thứ 4</button>
+            <button class="menu-tab" data-day="thu">Thứ 5</button>
+            <button class="menu-tab" data-day="fri">Thứ 6</button>
+        </div>
+
+        <!-- Monday -->
+        <div class="menu-content active" id="menu-mon">
+            <div class="menu-card">
+                <h3><i class="fas fa-calendar-day" style="color: var(--secondary-color); margin-right: 8px;"></i> Thứ Hai</h3>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-sun"></i> Bữa Trưa</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Cơm trắng</div>
+                        <div class="meal-item">Thịt gà rang gừng</div>
+                        <div class="meal-item">Canh bí đao nấu tôm</div>
+                        <div class="meal-item">Rau muống xào tỏi</div>
+                        <div class="meal-item">Tráng miệng: Chuối</div>
+                    </div>
+                </div>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-cookie-bite"></i> Bữa Phụ Xế Chiều</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Sữa tươi</div>
+                        <div class="meal-item">Bánh flan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tuesday -->
+        <div class="menu-content" id="menu-tue">
+            <div class="menu-card">
+                <h3><i class="fas fa-calendar-day" style="color: var(--secondary-color); margin-right: 8px;"></i> Thứ Ba</h3>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-sun"></i> Bữa Trưa</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Cơm trắng</div>
+                        <div class="meal-item">Cá basa sốt cà chua</div>
+                        <div class="meal-item">Canh rau ngót thịt băm</div>
+                        <div class="meal-item">Đậu phụ nhồi thịt sốt cà</div>
+                        <div class="meal-item">Tráng miệng: Cam</div>
+                    </div>
+                </div>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-cookie-bite"></i> Bữa Phụ Xế Chiều</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Sữa chua</div>
+                        <div class="meal-item">Bánh bông lan</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Wednesday -->
+        <div class="menu-content" id="menu-wed">
+            <div class="menu-card">
+                <h3><i class="fas fa-calendar-day" style="color: var(--secondary-color); margin-right: 8px;"></i> Thứ Tư</h3>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-sun"></i> Bữa Trưa</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Cơm trắng</div>
+                        <div class="meal-item">Thịt lợn kho trứng cút</div>
+                        <div class="meal-item">Canh cải thảo nấu thịt</div>
+                        <div class="meal-item">Su su xào</div>
+                        <div class="meal-item">Tráng miệng: Dưa hấu</div>
+                    </div>
+                </div>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-cookie-bite"></i> Bữa Phụ Xế Chiều</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Nước đậu xanh</div>
+                        <div class="meal-item">Xúc xích củ quả HVS</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Thursday -->
+        <div class="menu-content" id="menu-thu">
+            <div class="menu-card">
+                <h3><i class="fas fa-calendar-day" style="color: var(--secondary-color); margin-right: 8px;"></i> Thứ Năm</h3>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-sun"></i> Bữa Trưa</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Cơm trắng</div>
+                        <div class="meal-item">Bò xào rau củ</div>
+                        <div class="meal-item">Canh mồng tơi nấu cua</div>
+                        <div class="meal-item">Trứng chiên thịt</div>
+                        <div class="meal-item">Tráng miệng: Thanh long</div>
+                    </div>
+                </div>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-cookie-bite"></i> Bữa Phụ Xế Chiều</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Sữa tươi</div>
+                        <div class="meal-item">Bánh quy</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Friday -->
+        <div class="menu-content" id="menu-fri">
+            <div class="menu-card">
+                <h3><i class="fas fa-calendar-day" style="color: var(--secondary-color); margin-right: 8px;"></i> Thứ Sáu</h3>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-sun"></i> Bữa Trưa</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Phở bò truyền thống</div>
+                        <div class="meal-item">Giò lụa HVS</div>
+                        <div class="meal-item">Rau sống, giá đỗ</div>
+                        <div class="meal-item">Tráng miệng: Ổi</div>
+                    </div>
+                </div>
+                <div class="meal-group">
+                    <span class="meal-label"><i class="fas fa-cookie-bite"></i> Bữa Phụ Xế Chiều</span>
+                    <div class="meal-items">
+                        <div class="meal-item">Chè đậu đỏ</div>
+                        <div class="meal-item">Bánh cốm</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <p class="menu-note">Thực đơn của chúng tôi là sự kết hợp hài hòa giữa các món ăn truyền thống và hiện đại, giúp các con làm quen với đa dạng khẩu vị nhưng vẫn đảm bảo đầy đủ nhóm chất: chất bột đường, chất đạm, chất béo, vitamin và khoáng chất.</p>
+    </div>
+</section>
+
+<!-- Zone 4: Cam kết nguồn gốc -->
+<section class="section origin-section">
+    <div class="container">
+        <h2 class="section-title">Cam Kết Nguồn Gốc</h2>
+        <p class="section-subtitle">Chúng tôi tự hào làm chủ hệ sinh thái thực phẩm khép kín để mang lại sự an tâm cao nhất cho khách hàng.</p>
+
+        <div class="origin-grid">
+            <div class="origin-card animate-fade-in">
+                <div class="origin-card-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h4>Rau Tiên Du VietGAP</h4>
+                <p>Rau xanh tươi ngon từ vùng trồng đạt chuẩn VietGAP tại Tiên Du, Bắc Ninh.</p>
+            </div>
+            <div class="origin-card animate-fade-in" style="animation-delay: 0.1s">
+                <div class="origin-card-icon">
+                    <i class="fas fa-utensils"></i>
+                </div>
+                <h4>Bún Phở HVS</h4>
+                <p>Sợi bún phở truyền thống, 100% gạo Khang Dân, không hàn the, không chất tẩy.</p>
+            </div>
+            <div class="origin-card animate-fade-in" style="animation-delay: 0.2s">
+                <div class="origin-card-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <h4>Sản Phẩm OCOP</h4>
+                <p>Xúc xích, chả lụa, giò lụa đạt chuẩn OCOP 4 sao, an toàn tuyệt đối.</p>
+            </div>
+            <div class="origin-card animate-fade-in" style="animation-delay: 0.3s">
+                <div class="origin-card-icon">
+                    <i class="fas fa-search"></i>
+                </div>
+                <h4>Truy Xuất Nguồn Gốc</h4>
+                <p>Mỗi sản phẩm đều có thể truy xuất nguồn gốc rõ ràng từ vùng nguyên liệu.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Đăng Ký Tư Vấn Suất Ăn Học Đường</h2>
+        <p>Chúng tôi sẵn sàng thiết kế thực đơn riêng biệt phù hợp với nhu cầu của trường bạn.</p>
+        <div class="cta-buttons">
+            <a asp-controller="Contact" asp-action="Index" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Liên Hệ Ngay
+            </a>
+            <a href="tel:0963826668" class="btn btn-secondary">
+                <i class="fas fa-phone-alt"></i> Gọi 0963.826.668
+            </a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/services.js"></script>
+}

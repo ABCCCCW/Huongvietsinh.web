@@ -1,0 +1,202 @@
+@{
+    ViewData["Title"] = "Tuyển Dụng";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/recruitment.css">
+}
+
+<!-- Zone 1: Banner & Employer Branding -->
+<section class="recruitment-banner">
+    <div class="banner-overlay"></div>
+    <div class="container banner-content text-center">
+        <h1 class="animate-fade-in">Gia nhập Hương Việt Sinh</h1>
+        <p class="animate-fade-in" style="animation-delay: 0.2s">Tận tâm nâng cao chất lượng cuộc sống Việt</p>
+    </div>
+</section>
+
+<section class="section reasons-section">
+    <div class="container">
+        <div class="reasons-grid">
+            <div class="reason-card animate-fade-in" style="animation-delay: 0.3s">
+                <div class="reason-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h3>Môi Trường Ổn Định</h3>
+                <p>Công việc lâu dài, thu nhập đảm bảo.</p>
+            </div>
+            <div class="reason-card animate-fade-in" style="animation-delay: 0.4s">
+                <div class="reason-icon">
+                    <i class="fas fa-gift"></i>
+                </div>
+                <h3>Phúc Lợi Đầy Đủ</h3>
+                <p>BHXH đầy đủ, thưởng lễ tết.</p>
+            </div>
+            <div class="reason-card animate-fade-in" style="animation-delay: 0.5s">
+                <div class="reason-icon">
+                    <i class="fas fa-chart-line"></i>
+                </div>
+                <h3>Phát Triển Sự Nghiệp</h3>
+                <p>Lộ trình thăng tiến rõ ràng.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Zone 2: Job Listing -->
+<section class="section job-listing-section">
+    <div class="container">
+        <h2 class="section-title">Vị Trí Tuyển Dụng</h2>
+
+        <!-- Filters: Khối Văn phòng / Khối Bếp / Khối Vận hành/Nông trại -->
+        <div class="job-filters">
+            <button class="filter-btn active" data-filter="all">Tất cả</button>
+            <button class="filter-btn" data-filter="office">Khối Văn Phòng</button>
+            <button class="filter-btn" data-filter="kitchen">Khối Bếp</button>
+            <button class="filter-btn" data-filter="operation">Khối Vận Hành/Nông Trại</button>
+        </div>
+
+        <!-- Job Cards (Demo) -->
+        <div class="job-grid" id="jobGrid">
+            <!-- Job 1 -->
+            <div class="job-card" data-category="office">
+                <div class="job-badge">HOT</div>
+                <h3 class="job-title">Nhân Viên Hành Chính (Chuyên Bảo Hiểm)</h3>
+                <div class="job-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Long Biên, Hà Nội</span>
+                    <span class="salary"><i class="fas fa-money-bill-wave"></i> 10 - 12 Triệu</span>
+                    <span><i class="fas fa-clock"></i> Hạn: 30/03/2026</span>
+                </div>
+                <button class="btn btn-primary w-100 open-modal" data-job="insurance">Ứng Tuyển Ngay</button>
+            </div>
+
+            <!-- Job 2 -->
+            <div class="job-card" data-category="kitchen">
+                <h3 class="job-title">Đầu Bếp Chính (Bếp Ăn Công Nghiệp)</h3>
+                <div class="job-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Long Biên / Gia Lâm</span>
+                    <span class="salary"><i class="fas fa-money-bill-wave"></i> 12 - 15 Triệu</span>
+                    <span><i class="fas fa-clock"></i> Hạn: 15/04/2026</span>
+                </div>
+                <button class="btn btn-primary w-100 open-modal" data-job="chef">Ứng Tuyển Ngay</button>
+            </div>
+
+            <!-- Job 3 -->
+            <div class="job-card" data-category="operation">
+                <h3 class="job-title">Lái Xe Tải (Bằng C trở lên)</h3>
+                <div class="job-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Toàn Quốc</span>
+                    <span class="salary"><i class="fas fa-money-bill-wave"></i> 10 - 14 Triệu</span>
+                    <span><i class="fas fa-clock"></i> Hạn: 30/03/2026</span>
+                </div>
+                <button class="btn btn-primary w-100 open-modal" data-job="driver">Ứng Tuyển Ngay</button>
+            </div>
+
+            <!-- Job 4 -->
+            <div class="job-card" data-category="kitchen">
+                <h3 class="job-title">Phụ Bếp / Sơ Chế</h3>
+                <div class="job-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Long Biên, Hà Nội</span>
+                    <span class="salary"><i class="fas fa-money-bill-wave"></i> 7 - 9 Triệu</span>
+                    <span><i class="fas fa-clock"></i> Hạn: 30/03/2026</span>
+                </div>
+                <button class="btn btn-primary w-100 open-modal" data-job="kitchen_helper">Ứng Tuyển Ngay</button>
+            </div>
+
+            <!-- Job 5 -->
+            <div class="job-card" data-category="operation">
+                <h3 class="job-title">Nhân Viên Kỹ Thuật Nông Trại</h3>
+                <div class="job-meta">
+                    <span><i class="fas fa-map-marker-alt"></i> Bắc Ninh</span>
+                    <span class="salary"><i class="fas fa-money-bill-wave"></i> 8 - 10 Triệu</span>
+                    <span><i class="fas fa-clock"></i> Hạn: 20/04/2026</span>
+                </div>
+                <button class="btn btn-primary w-100 open-modal" data-job="farm_tech">Ứng Tuyển Ngay</button>
+            </div>
+        </div>
+
+        <div class="text-center" style="margin-top:32px;">
+            <a href="mailto:info@huongvietsinh.com.vn" class="btn btn-secondary">
+                Xem tất cả các vị trí tuyển dụng
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- Zone 4: Process Flow -->
+<section class="section process-section">
+    <div class="container">
+        <h2 class="section-title">Quy Trình Tuyển Dụng</h2>
+        <div class="process-steps">
+            <div class="step-item">
+                <div class="step-icon">1</div>
+                <h4>Nộp Hồ Sơ</h4>
+                <p>Gửi CV qua Email hoặc nộp trực tiếp tại văn phòng.</p>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step-item">
+                <div class="step-icon">2</div>
+                <h4>Phỏng Vấn / Test</h4>
+                <p>Trao đổi chuyên môn và làm bài kiểm tra năng lực.</p>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step-item">
+                <div class="step-icon">3</div>
+                <h4>Thỏa Thuận</h4>
+                <p>Đàm phán lương thưởng và các chế độ đãi ngộ.</p>
+            </div>
+            <div class="step-connector"></div>
+            <div class="step-item">
+                <div class="step-icon">4</div>
+                <h4>Đi Làm</h4>
+                <p>Tiếp nhận công việc và gia nhập đại gia đình HVS.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Zone 3: Job Detail Modal -->
+<div id="jobModal" class="modal">
+    <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+            <h2 id="modalJobTitle">Nhân Viên Hành Chính (Chuyên Bảo Hiểm)</h2>
+            <div class="job-detail-meta">
+                <p><strong><i class="fas fa-map-marker-alt"></i> Địa điểm:</strong> Long Biên, Hà Nội</p>
+                <p><strong><i class="fas fa-money-bill-wave"></i> Mức lương:</strong> 10 - 12 Triệu</p>
+                <p><strong><i class="fas fa-clock"></i> Hạn nộp:</strong> 30/03/2026</p>
+            </div>
+            <hr>
+            <div class="job-description">
+                <h4>Mô Tả Công Việc</h4>
+                <ul>
+                    <li>Thực hiện các thủ tục báo tăng, giảm BHXH, BHYT, BHTN hàng tháng.</li>
+                    <li>Giải quyết các chế độ ốm đau, thai sản, dưỡng sức cho người lao động.</li>
+                    <li>Quản lý hồ sơ nhân sự, hợp đồng lao động.</li>
+                    <li>Các công việc hành chính khác theo yêu cầu của Trưởng bộ phận.</li>
+                </ul>
+                <h4>Yêu Cầu</h4>
+                <ul>
+                    <li>Tốt nghiệp Cao đẳng/Đại học chuyên ngành Quản trị nhân lực, Luật...</li>
+                    <li>Có ít nhất 1 năm kinh nghiệm làm mảng BHXH.</li>
+                    <li>Thành thạo tin học văn phòng.</li>
+                    <li>Cẩn thận, tỉ mỉ, trung thực.</li>
+                </ul>
+                <h4>Quyền Lợi</h4>
+                <ul>
+                    <li>Thu nhập cạnh tranh, thưởng lễ tết.</li>
+                    <li>Môi trường làm việc chuyên nghiệp, ổn định.</li>
+                    <li>Được đóng BHXH đầy đủ theo quy định.</li>
+                </ul>
+            </div>
+            <div class="modal-actions">
+                <button class="btn btn-secondary"
+                    onclick="alert('Vui lòng gửi CV về email: info@huongvietsinh.com.vn')">Nộp CV qua Email</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/recruitment.js"></script>
+}

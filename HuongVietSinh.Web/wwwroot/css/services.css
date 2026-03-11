@@ -1,0 +1,1087 @@
+/* ========================================
+   SERVICES PAGES STYLES
+   ======================================== */
+
+/* --- Services Banner --- */
+.services-banner {
+    background-image: url('/image/news/hvs-truong-hoc-doi-tac.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 380px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.services-banner .banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(226,30,38,0.85) 0%, rgba(180,20,28,0.75) 100%);
+    z-index: 1;
+}
+
+.services-banner .banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.services-banner h1 {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 12px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.services-banner p {
+    font-size: 1.25rem;
+    font-weight: 300;
+    max-width: 650px;
+    margin: 0 auto;
+}
+
+/* --- Overview Section Title --- */
+.section-title {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-bottom: 14px;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    margin: 12px auto 0;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    text-align: center;
+    color: var(--text-light);
+    font-size: 1.05rem;
+    max-width: 600px;
+    margin: 0 auto 50px;
+}
+
+/* --- Zigzag Service Blocks --- */
+.service-block {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 60px;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+    padding: 0;
+}
+
+.service-block:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.service-block:last-child {
+    margin-bottom: 0;
+}
+
+.service-block.reverse .service-block-image {
+    order: 2;
+}
+
+.service-block.reverse .service-block-content {
+    order: 1;
+}
+
+.service-block-image {
+    overflow: hidden;
+    position: relative;
+    height: 100%;
+}
+
+.service-block-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 340px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s ease;
+}
+
+.service-block-image:hover img {
+    transform: scale(1.05);
+}
+
+.service-tag {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 6px 16px;
+    border-radius: 999px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    margin-bottom: 14px;
+}
+
+.service-block-content {
+    padding: 36px 40px;
+}
+
+.service-block-content h3 {
+    font-size: 1.6rem;
+    margin-bottom: 16px;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.service-block-content h3::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background-color: var(--secondary-color);
+    border-radius: 2px;
+}
+
+.service-block-content p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 24px;
+    font-size: 1rem;
+}
+
+.service-block-content .btn {
+    font-size: 0.9rem;
+}
+
+/* --- Catering Page: Zone 1 - Nutrition Standards --- */
+.nutrition-section {
+    background-color: var(--background-light);
+}
+
+.nutrition-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+
+.nutrition-visual {
+    text-align: center;
+}
+
+.nutrition-visual img {
+    max-width: 380px;
+    margin: 0 auto;
+    filter: drop-shadow(0 4px 12px rgba(0,0,0,0.1));
+}
+
+.nutrition-pyramid {
+    width: 100%;
+    max-width: 380px;
+    margin: 0 auto;
+}
+
+.pyramid-level {
+    margin: 0 auto;
+    padding: 14px 20px;
+    text-align: center;
+    color: var(--white);
+    font-weight: 600;
+    font-size: 0.85rem;
+    border-radius: 4px;
+    margin-bottom: 4px;
+    transition: transform 0.3s ease;
+}
+
+.pyramid-level:hover {
+    transform: scaleX(1.03);
+}
+
+.pyramid-level:nth-child(1) { width: 40%; background: #f2be1a; }
+.pyramid-level:nth-child(2) { width: 55%; background: #f0a01a; }
+.pyramid-level:nth-child(3) { width: 70%; background: #e8723c; }
+.pyramid-level:nth-child(4) { width: 85%; background: #e44930; }
+.pyramid-level:nth-child(5) { width: 100%; background: #e21e26; }
+
+.nutrition-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.nutrition-text p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+.nutrition-text .highlight-box {
+    background: var(--white);
+    padding: 20px;
+    border-left: 4px solid var(--secondary-color);
+    border: 1px solid var(--border-color);
+    border-left: 4px solid var(--secondary-color);
+    border-radius: 0 12px 12px 0;
+    margin-top: 20px;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.nutrition-text .highlight-box:hover {
+    box-shadow: var(--shadow-md);
+}
+
+.highlight-box p {
+    color: var(--primary-color);
+    font-weight: 500;
+    margin-bottom: 0;
+}
+
+/* --- Catering Page: Zone 2 - One-way Kitchen Process --- */
+.process-kitchen-section {
+    background: var(--white);
+}
+
+.process-kitchen-section .section-title {
+    margin-bottom: 10px;
+}
+
+.process-kitchen-desc {
+    text-align: center;
+    color: var(--text-light);
+    max-width: 800px;
+    margin: 0 auto 50px;
+    line-height: 1.7;
+}
+
+.kitchen-flow {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 0;
+    position: relative;
+    padding: 20px 0;
+    overflow-x: auto;
+}
+
+.kitchen-step {
+    flex: 0 0 180px;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    background: var(--background-light);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 24px 16px;
+    transition: var(--transition);
+}
+
+.kitchen-step:hover {
+    box-shadow: var(--shadow-md);
+    border-color: var(--secondary-color);
+    transform: translateY(-4px);
+}
+
+.kitchen-step-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-color), #b81920);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    margin: 0 auto 14px;
+    box-shadow: 0 6px 20px rgba(226,30,38,0.3);
+    transition: transform 0.3s ease;
+}
+
+.kitchen-step:hover .kitchen-step-icon {
+    transform: scale(1.1);
+}
+
+.kitchen-step h4 {
+    font-size: 0.95rem;
+    color: var(--primary-color);
+    margin-bottom: 6px;
+}
+
+.kitchen-step p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.kitchen-arrow {
+    flex: 0 0 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 28px;
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+}
+
+/* --- Catering Page: Zone 3 - Sample Menu --- */
+.menu-section {
+    background-color: var(--background-light);
+}
+
+.menu-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.menu-tab {
+    padding: 10px 28px;
+    border: 2px solid var(--border-color);
+    border-radius: 30px;
+    background: var(--white);
+    color: var(--text-light);
+    cursor: pointer;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+    font-size: 0.95rem;
+}
+
+.menu-tab:hover,
+.menu-tab.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.menu-content {
+    display: none;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.menu-content.active {
+    display: block;
+    animation: fadeIn 0.4s ease;
+}
+
+.menu-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 30px;
+    box-shadow: var(--shadow-sm);
+}
+
+.menu-card h3 {
+    text-align: center;
+    margin-bottom: 25px;
+    font-size: 1.3rem;
+}
+
+.meal-group {
+    margin-bottom: 20px;
+}
+
+.meal-group:last-child {
+    margin-bottom: 0;
+}
+
+.meal-label {
+    display: inline-block;
+    background: var(--primary-color);
+    color: var(--white);
+    padding: 4px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+.meal-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.meal-item {
+    background: var(--background-light);
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    color: var(--text-color);
+    border-left: 3px solid var(--secondary-color);
+}
+
+.menu-note {
+    text-align: center;
+    color: var(--text-light);
+    margin-top: 30px;
+    font-style: italic;
+    line-height: 1.7;
+}
+
+/* --- Catering Page: Zone 4 - Origin Commitment --- */
+.origin-section {
+    background: var(--white);
+}
+
+.origin-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.origin-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 30px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.origin-card:hover {
+    border-color: var(--secondary-color);
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-lg);
+}
+
+.origin-card-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 1.8rem;
+    color: var(--accent-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.origin-card h4 {
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+}
+
+.origin-card p {
+    font-size: 0.9rem;
+    color: var(--text-light);
+    line-height: 1.5;
+}
+
+/* --- Events Page: Zone 1 - Professional Team --- */
+.team-section {
+    background: var(--background-light);
+}
+
+.team-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    padding: 0;
+}
+
+.team-image {
+    overflow: hidden;
+    height: 100%;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    min-height: 400px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.team-image:hover img {
+    transform: scale(1.05);
+}
+
+.team-text {
+    padding: 36px 40px;
+}
+
+.team-text h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+}
+
+.team-text p {
+    color: var(--text-light);
+    line-height: 1.8;
+    margin-bottom: 16px;
+}
+
+/* --- Events Page: Zone 2 - Service Types --- */
+.event-types-section {
+    background: var(--white);
+}
+
+.event-types-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.event-type-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: var(--shadow-sm);
+    transition: var(--transition);
+}
+
+.event-type-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.event-type-image {
+    height: 250px;
+    overflow: hidden;
+}
+
+.event-type-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.event-type-card:hover .event-type-image img {
+    transform: scale(1.08);
+}
+
+.event-type-content {
+    padding: 28px;
+}
+
+.event-type-content h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+}
+
+.event-type-content p {
+    color: var(--text-light);
+    line-height: 1.7;
+    font-size: 0.95rem;
+}
+
+/* --- Products Page: Product Grid --- */
+.products-section {
+    background: var(--background-light);
+}
+
+.products-carousel {
+    position: relative;
+    margin-top: 10px;
+    padding: 0 48px; /* chừa chỗ cho mũi tên hai bên */
+}
+
+.products-viewport {
+    overflow: hidden;
+}
+
+.products-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 1px solid var(--border-color);
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: var(--shadow-sm);
+    cursor: pointer;
+    color: var(--primary-color);
+    transition: var(--transition);
+    z-index: 2;
+}
+
+.products-arrow:hover:not(:disabled) {
+    background: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.products-arrow:disabled {
+    opacity: 0.4;
+    cursor: default;
+}
+
+.products-arrow.prev {
+    left: 0;
+}
+
+.products-arrow.next {
+    right: 0;
+}
+
+.products-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+.product-card {
+    perspective: 800px;
+    height: 320px;
+    cursor: pointer;
+}
+
+.product-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.product-card:hover .product-card-inner,
+.product-card.flipped .product-card-inner {
+    transform: rotateY(180deg);
+}
+
+.product-front,
+.product-back {
+    position: absolute;
+    inset: 0;
+    backface-visibility: hidden;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.product-front {
+    background: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.product-front .product-image {
+    height: 180px;
+    overflow: hidden;
+    position: relative;
+    background: #f5f5f5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-front .product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.product-tag {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--secondary-color);
+    color: var(--primary-color);
+    padding: 3px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    z-index: 2;
+}
+
+.product-tag.ocop {
+    background: #f2be1a;
+    color: #333;
+}
+
+.product-tag.non-gmo {
+    background: #e21e26;
+    color: var(--white);
+}
+
+.product-info {
+    padding: 14px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.product-info h4 {
+    font-size: 0.95rem;
+    margin-bottom: 6px;
+    color: var(--primary-color);
+}
+
+.product-info p {
+    font-size: 0.8rem;
+    color: var(--text-light);
+    line-height: 1.4;
+}
+
+.flip-hint {
+    margin-top: auto;
+    font-size: 0.75rem;
+    color: #aaa;
+    text-align: center;
+    padding-top: 8px;
+}
+
+.product-back {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: rotateY(180deg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 24px;
+    text-align: center;
+}
+
+.product-back h4 {
+    color: var(--white);
+    font-size: 1.1rem;
+    margin-bottom: 14px;
+}
+
+.product-back p {
+    font-size: 0.9rem;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+.product-back .back-icon {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 16px;
+}
+
+/* --- Products Page: Certificates --- */
+.certificates-section {
+    background: var(--white);
+}
+
+.certificates-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.certificates-grid .cert-card {
+    flex: 0 0 calc((100% - 120px) / 5);
+    max-width: calc((100% - 120px) / 5);
+}
+
+.cert-card {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 30px 20px;
+    text-align: center;
+    transition: var(--transition);
+}
+
+.cert-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+}
+
+.cert-icon {
+    width: 70px;
+    height: 70px;
+    background: var(--white);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 16px;
+    font-size: 2rem;
+    color: var(--accent-color);
+    box-shadow: var(--shadow-sm);
+}
+
+.cert-card h4 {
+    font-size: 1rem;
+    margin-bottom: 6px;
+}
+
+.cert-card p {
+    font-size: 0.85rem;
+    color: var(--text-light);
+}
+
+/* --- CTA Section --- */
+.cta-section {
+    background: linear-gradient(135deg, var(--primary-color) 0%, #b81920 100%);
+    color: var(--white);
+    text-align: center;
+    padding: 70px 0;
+    margin-top: 20px;
+}
+
+.cta-section h2 {
+    color: var(--white);
+    font-size: 2rem;
+    margin-bottom: 16px;
+}
+
+.cta-section p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    margin-bottom: 30px;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-buttons {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.cta-section .btn-primary {
+    background: var(--secondary-color);
+    color: var(--primary-color);
+}
+
+.cta-section .btn-secondary {
+    border-color: var(--white);
+    color: var(--white);
+}
+
+.cta-section .btn-secondary:hover {
+    background: var(--white);
+    color: var(--primary-color);
+}
+
+/* --- Breadcrumb --- */
+.breadcrumb {
+    padding: 14px 0;
+    font-size: 0.9rem;
+}
+
+.breadcrumb .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.breadcrumb a {
+    color: var(--text-light);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.breadcrumb a:hover {
+    color: var(--primary-color);
+}
+
+.breadcrumb span {
+    color: #ccc;
+    margin: 0 4px;
+}
+
+.breadcrumb strong {
+    color: var(--primary-color);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+    .service-block {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .service-block.reverse .service-block-image,
+    .service-block.reverse .service-block-content {
+        order: unset;
+    }
+
+    .nutrition-grid,
+    .team-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .event-types-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .kitchen-flow {
+        flex-wrap: wrap;
+        gap: 10px;
+    }
+
+    .kitchen-step {
+        flex: 0 0 140px;
+        padding: 18px 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-banner {
+        height: 260px;
+    }
+
+    .services-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .services-banner p {
+        font-size: 1rem;
+    }
+
+    .section-title {
+        font-size: 1.6rem;
+    }
+
+    .service-block-image img {
+        height: 240px;
+    }
+
+    .products-section .products-carousel {
+        padding: 0 32px;
+    }
+
+    .products-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .product-card {
+        height: 280px;
+    }
+
+    .certificates-grid .cert-card {
+        flex: 0 0 calc((100% - 60px) / 3);
+        max-width: calc((100% - 60px) / 3);
+    }
+
+    .kitchen-flow {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .kitchen-arrow {
+        transform: rotate(90deg);
+        margin: 0;
+    }
+
+    .menu-tabs {
+        gap: 6px;
+    }
+
+    .menu-tab {
+        padding: 8px 18px;
+        font-size: 0.85rem;
+    }
+
+    .origin-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media (max-width: 480px) {
+    .products-section .products-carousel {
+        padding: 0 24px;
+    }
+
+    .products-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 14px;
+    }
+
+    .product-card {
+        height: 260px;
+    }
+
+    .certificates-grid .cert-card {
+        flex: 0 0 calc((100% - 30px) / 2);
+        max-width: calc((100% - 30px) / 2);
+    }
+
+    .origin-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .service-block { gap: 60px; margin-bottom: 100px; }
+    .service-block-image img { height: 400px; }
+    .service-block-content h3 { font-size: 1.8rem; }
+    .service-block-content p { font-size: 1.08rem; }
+    .services-banner { height: 440px; }
+    .services-banner h1 { font-size: 3rem; }
+    .services-banner p { font-size: 1.35rem; }
+    .nutrition-grid { gap: 60px; }
+    .kitchen-step { flex: 0 0 200px; }
+    .kitchen-step-icon { width: 90px; height: 90px; font-size: 2rem; }
+    .products-grid { gap: 28px; }
+    .product-card { height: 360px; }
+    .origin-grid { gap: 36px; }
+    .cta-section { padding: 80px 0; }
+    .cta-section h2 { font-size: 2.2rem; }
+}
+
+@media (min-width: 1920px) {
+    .service-block { gap: 80px; margin-bottom: 120px; }
+    .service-block-image img { height: 460px; }
+    .service-block-content h3 { font-size: 2rem; }
+    .service-block-content p { font-size: 1.15rem; line-height: 1.9; }
+    .services-banner { height: 500px; }
+    .services-banner h1 { font-size: 3.4rem; }
+    .services-banner p { font-size: 1.5rem; }
+    .kitchen-step { flex: 0 0 220px; }
+    .kitchen-step-icon { width: 100px; height: 100px; font-size: 2.2rem; }
+    .kitchen-step h4 { font-size: 1.1rem; }
+    .products-grid { gap: 32px; }
+    .product-card { height: 400px; }
+    .product-front .product-image { height: 220px; }
+    .product-info h4 { font-size: 1.05rem; }
+    .origin-card { padding: 40px; }
+    .origin-card-icon { width: 80px; height: 80px; font-size: 2rem; }
+    .cta-section { padding: 100px 0; }
+    .cta-section h2 { font-size: 2.6rem; }
+    .cta-section p { font-size: 1.2rem; }
+    .event-type-image { height: 320px; }
+    .event-type-content { padding: 34px; }
+    .event-type-content h3 { font-size: 1.5rem; }
+    .team-image img { height: 500px; }
+    .cert-card { padding: 36px 24px; }
+    .cert-icon { width: 80px; height: 80px; font-size: 2.2rem; }
+}

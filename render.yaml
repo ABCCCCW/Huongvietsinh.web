@@ -1,0 +1,8 @@
+services:
+  - type: web
+    name: huongvietsinh
+    runtime: docker
+    region: singapore
+    plan: free
+    dockerfilePath: ./HuongVietSinh.Web/Dockerfile
+    dockerContext: ./HuongVietSinh.Web

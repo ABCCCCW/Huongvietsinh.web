@@ -1,0 +1,188 @@
+@{
+    ViewData["Title"] = "Tin Tức";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/news.css">
+}
+
+<section class="news-banner">
+    <div class="overlay"></div>
+    <div class="container banner-content">
+        <h1 class="animate-fade-in">TIN TỨC</h1>
+        <p class="animate-fade-in" style="animation-delay: 0.2s">Năng động - Cập nhật - Chuyên sâu</p>
+    </div>
+</section>
+
+
+<main class="section" style="padding-top: 20px;">
+    <div class="container">
+        <div class="featured-wrap">
+            <h2 class="news-block-title">Bài Viết Nổi Bật</h2>
+            <article class="featured-post">
+                <img src="~/image/news/article-demo-1.jpeg"
+                    alt="Hương Việt Sinh chăm sóc thế hệ trẻ bằng bữa ăn học đường ngon sạch">
+                <div class="featured-content">
+                    <div class="meta-row">
+                        <span class="category-badge tag-activity">Hoạt động HVS</span>
+                        <span><i class="far fa-calendar"></i> 10/03/2026</span>
+                        <span><i class="far fa-user"></i> Ban Truyền Thông</span>
+                    </div>
+                    <h2>Hương Việt Sinh Chăm Sóc Thế Hệ Trẻ Bằng Bữa Ăn Học Đường Ngon Sạch</h2>
+                    <p>Với 13 năm tận tâm, Công ty TNHH Hương Việt Sinh nỗ lực mang đến những bữa ăn học đường bổ dưỡng, góp phần nuôi dưỡng thế hệ trẻ khỏe về cả thể chất lẫn trí tuệ.</p>
+                    <a asp-controller="News" asp-action="Detail" class="btn btn-primary"><i class="fas fa-book-open"></i> Đọc Tiếp</a>
+                </div>
+            </article>
+        </div>
+
+        <div class="category-tabs">
+            <button class="tab-btn active" data-category="all">Tất cả</button>
+            <button class="tab-btn" data-category="activity">Hoạt động HVS</button>
+            <button class="tab-btn" data-category="nutrition">Góc Dinh dưỡng</button>
+            <button class="tab-btn" data-category="origin">Câu chuyện nguồn gốc</button>
+        </div>
+
+        <section class="news-block">
+            <h2 class="news-block-title">Mới Nhất</h2>
+            <div class="news-grid">
+                <article class="news-card" data-category="activity">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail">
+                        <img src="~/image/news/hvs-hoat-dong-noi-bo.jpg"
+                            alt="Ngày hội nội bộ HVS - Gắn kết đội ngũ tại nông trại Tiên Du">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-activity">Hoạt động HVS</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">Ngày hội nội bộ HVS: Gắn kết đội ngũ tại
+                                nông trại Tiên Du</a></h3>
+                        <p class="news-date">10/03/2026</p>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="nutrition">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail">
+                        <img src="~/image/news/hvs-bua-an-hoc-sinh.jpg"
+                            alt="Xây dựng thực đơn học đường khoa học cho trẻ mầm non và tiểu học">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-nutrition">Góc Dinh dưỡng</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">Xây dựng thực đơn học đường khoa học cho trẻ
+                                mầm non và tiểu học</a></h3>
+                        <p class="news-date">08/03/2026</p>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="origin">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail">
+                        <img src="~/image/news/hvs-so-che-rau-cu.jpg"
+                            alt="Hành trình rau sạch VietGAP từ Tiên Du đến bếp ăn học đường">
+                    </a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-origin">Câu chuyện nguồn gốc</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">Hành trình rau sạch VietGAP từ Tiên Du đến
+                                bếp ăn học đường</a></h3>
+                        <p class="news-date">06/03/2026</p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <section class="news-block">
+            <h2 class="news-block-title">Không Thể Bỏ Lỡ</h2>
+            <div class="highlight-list">
+                <article class="highlight-item">
+                    <h4><a asp-controller="News" asp-action="Detail">Top 7 tiêu chí chọn đơn vị cung cấp suất ăn học đường an toàn</a></h4>
+                    <p>Bài viết tổng hợp dành cho phụ huynh và nhà trường.</p>
+                </article>
+                <article class="highlight-item">
+                    <h4><a asp-controller="News" asp-action="Detail">Quy trình bếp một chiều tại HVS có gì đặc biệt?</a></h4>
+                    <p>Giải thích rõ các bước để kiểm soát nguy cơ nhiễm chéo.</p>
+                </article>
+                <article class="highlight-item">
+                    <h4><a asp-controller="News" asp-action="Detail">Dấu mốc OCOP: Nâng chuẩn thực phẩm phục vụ học đường</a></h4>
+                    <p>Câu chuyện sản phẩm đạt chuẩn và giá trị với cộng đồng.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="news-block">
+            <h2 class="news-block-title">Tất Cả Bài Viết</h2>
+            <div class="news-grid">
+                <article class="news-card" data-category="activity">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail"><img
+                            src="~/image/news/hvs-truong-hoc-doi-tac.jpg"
+                            alt="HVS tham quan mô hình canteen chuẩn tại các trường đối tác"></a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-activity">Hoạt động HVS</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">HVS tham quan mô hình canteen chuẩn tại các
+                                trường đối tác</a></h3>
+                        <p class="news-date">05/03/2026</p>
+                    </div>
+                </article>
+                <article class="news-card" data-category="nutrition">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail"><img
+                            src="~/image/news/hvs-nguyen-lieu-tuoi.jpg"
+                            alt="Vai trò của bữa phụ chiều trong phát triển thể chất học sinh"></a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-nutrition">Góc Dinh dưỡng</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">Vai trò của bữa phụ chiều trong phát triển
+                                thể chất học sinh</a></h3>
+                        <p class="news-date">04/03/2026</p>
+                    </div>
+                </article>
+                <article class="news-card" data-category="origin">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail"><img
+                            src="~/image/news/hvs-nha-may-san-xuat.jpg"
+                            alt="Nhà máy bún HVS - Tự động hóa và kiểm soát chất lượng theo lô"></a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-origin">Câu chuyện nguồn gốc</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">Nhà máy bún HVS: Tự động hóa và kiểm soát
+                                chất lượng theo lô</a></h3>
+                        <p class="news-date">02/03/2026</p>
+                    </div>
+                </article>
+
+                <article class="news-card" data-category="activity">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail"><img
+                            src="~/image/news/hvs-le-ky-ket-hop-tac.jpg"
+                            alt="Lễ tổng kết quý I - Tri ân các tập thể bếp ăn xuất sắc"></a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-activity">Hoạt động HVS</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">Lễ tổng kết quý I: Tri ân các tập thể bếp ăn
+                                xuất sắc</a></h3>
+                        <p class="news-date">28/02/2026</p>
+                    </div>
+                </article>
+                <article class="news-card" data-category="nutrition">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail"><img
+                            src="~/image/news/hvs-chia-suat-an.jpg"
+                            alt="5 nhóm vi chất cần ưu tiên trong thực đơn trẻ độ tuổi 6-11"></a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-nutrition">Góc Dinh dưỡng</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">5 nhóm vi chất cần ưu tiên trong thực đơn trẻ
+                                độ tuổi 6-11</a></h3>
+                        <p class="news-date">25/02/2026</p>
+                    </div>
+                </article>
+                <article class="news-card" data-category="origin">
+                    <a class="news-thumb" asp-controller="News" asp-action="Detail"><img
+                            src="~/image/news/hvs-kiem-tra-chat-luong.jpg"
+                            alt="OCOP 4 sao - Chuẩn hóa chất lượng cho chuỗi thực phẩm học đường"></a>
+                    <div class="news-card-content">
+                        <span class="category-badge tag-origin">Câu chuyện nguồn gốc</span>
+                        <h3 class="news-title"><a asp-controller="News" asp-action="Detail">OCOP 4 sao: Chuẩn hóa chất lượng cho chuỗi
+                                thực phẩm học đường</a></h3>
+                        <p class="news-date">22/02/2026</p>
+                    </div>
+                </article>
+            </div>
+
+            <div class="load-more-wrap">
+                <button class="btn btn-secondary">Xem Thêm</button>
+            </div>
+        </section>
+    </div>
+</main>
+
+@section Scripts {
+    <script src="~/js/news.js"></script>
+}

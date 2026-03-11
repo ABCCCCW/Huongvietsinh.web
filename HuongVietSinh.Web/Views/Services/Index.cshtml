@@ -1,0 +1,69 @@
+@{
+    ViewData["Title"] = "Dịch Vụ";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/services.css">
+}
+
+<section class="services-banner">
+    <div class="banner-overlay"></div>
+    <div class="container banner-content">
+        <h1 class="animate-fade-in">Dịch vụ của chúng tôi</h1>
+        <p class="animate-fade-in" style="animation-delay: 0.2s">Giải pháp ẩm thực toàn diện - An toàn, chất lượng, tận tâm</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <h2 class="section-title">Ba Nhóm Dịch Vụ Chính</h2>
+        <p class="section-subtitle">Dựa trên nền tảng hệ sinh thái thực phẩm khép kín, Hương Việt Sinh mang đến các giải pháp ẩm thực đa dạng và đáng tin cậy.</p>
+
+        <div class="service-block animate-fade-in">
+            <div class="service-block-image">
+                <img src="~/image/news/hvs-chia-suat-an.jpg" alt="Cung cấp suất ăn học đường - Chia suất ăn đảm bảo an toàn">
+            </div>
+            <div class="service-block-content">
+                <span class="service-tag"><i class="fas fa-utensils"></i> Suất ăn học đường</span>
+                <h3>Cung Cấp Suất Ăn, Canteen</h3>
+                <p>Bữa ăn của trẻ là niềm trăn trở lớn nhất của mỗi gia đình. Thấu hiểu điều đó, chúng tôi chăm chút từng khay cơm bằng sự tận tâm của người làm cha mẹ. Các suất ăn dành cho học sinh mầm non và tiểu học đều được các chuyên gia tính toán calo khoa học, đảm bảo nguồn năng lượng dồi dào cho sự phát triển của các con.</p>
+                <a asp-controller="Services" asp-action="Catering" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Xem Chi Tiết</a>
+            </div>
+        </div>
+
+        <div class="service-block reverse animate-fade-in">
+            <div class="service-block-image">
+                <img src="~/image/news/hvs-doi-ngu-nhan-vien.jpg" alt="Tổ chức sự kiện liên hoan - Đội ngũ nhân viên chuyên nghiệp">
+            </div>
+            <div class="service-block-content">
+                <span class="service-tag"><i class="fas fa-glass-cheers"></i> Sự kiện & Tiệc</span>
+                <h3>Tổ Chức Sự Kiện, Liên Hoan</h3>
+                <p>Mỗi buổi tiệc hay sự kiện tập thể đều là dịp để gắn kết và sẻ chia niềm vui. Chúng tôi đồng hành cùng bạn để tạo nên những khoảnh khắc trọn vẹn với dịch vụ tiệc chuyên nghiệp và ấm cúng. Tại Hương Việt Sinh, yếu tố an toàn thực phẩm luôn được đặt lên hàng đầu.</p>
+                <a asp-controller="Services" asp-action="Events" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Xem Chi Tiết</a>
+            </div>
+        </div>
+
+        <div class="service-block animate-fade-in">
+            <div class="service-block-image">
+                <img src="~/image/news/hvs-nguyen-lieu-tuoi.jpg" alt="Cung ứng thực phẩm an toàn - Nguyên liệu tươi sạch">
+            </div>
+            <div class="service-block-content">
+                <span class="service-tag"><i class="fas fa-leaf"></i> Thực phẩm sạch</span>
+                <h3>Cung ứng thực phẩm an toàn</h3>
+                <p>Sức khỏe của cộng đồng bắt đầu từ những nguyên liệu an toàn và tươi ngon. Chúng tôi mang đến nguồn thực phẩm đa dạng từ hệ sinh thái tự chủ, gồm rau tươi đạt chuẩn VietGAP, các loại bún phở truyền thống và sản phẩm đạt chuẩn OCOP như xúc xích, chả lụa.</p>
+                <a asp-controller="Services" asp-action="Products" class="btn btn-primary"><i class="fas fa-arrow-right"></i> Xem Chi Tiết</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="cta-section">
+    <div class="container">
+        <h2>Bạn Cần Tư Vấn Dịch Vụ?</h2>
+        <p>Liên hệ ngay với chúng tôi để được tư vấn giải pháp ẩm thực phù hợp nhất cho đơn vị của bạn.</p>
+        <div class="cta-buttons">
+            <a asp-controller="Contact" asp-action="Index" class="btn btn-primary"><i class="fas fa-paper-plane"></i> Gửi Yêu Cầu Tư Vấn</a>
+            <a href="tel:0963826668" class="btn btn-secondary"><i class="fas fa-phone-alt"></i> Gọi Ngay 0963.826.668</a>
+        </div>
+    </div>
+</section>

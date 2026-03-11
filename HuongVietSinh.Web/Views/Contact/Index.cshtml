@@ -1,0 +1,139 @@
+@{
+    ViewData["Title"] = "Liên Hệ";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/contact.css">
+}
+
+<!-- Page Banner -->
+<section class="page-banner">
+    <div class="banner-overlay"></div>
+    <div class="container banner-content">
+        <h1 class="animate-fade-in">Liên Hệ Với Chúng Tôi</h1>
+        <p class="animate-fade-in" style="animation-delay: 0.2s">Hương Việt Sinh luôn lắng nghe và sẵn sàng phục vụ</p>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="section contact-section">
+    <div class="container">
+        <div class="contact-grid">
+
+            <!-- Left Column: Info & Map -->
+            <div class="contact-left">
+                <div class="info-block animate-fade-in" style="animation-delay: 0.3s">
+                    <h2 class="section-title-left">Thông Tin Văn Phòng</h2>
+                    <ul class="info-list">
+                        <li>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div>
+                                <strong>Địa chỉ trụ sở:</strong>
+                                <p>Lô BT1 Ngõ 191 đường Phúc Lợi, P. Phúc Lợi, Q. Long Biên, Hà Nội</p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-phone-alt"></i>
+                            <div>
+                                <strong>Hotline Kinh doanh:</strong>
+                                <p><a href="tel:0963826668">0963 826 668</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-envelope"></i>
+                            <div>
+                                <strong>Email:</strong>
+                                <p><a href="mailto:info@huongvietsinh.com.vn">info@huongvietsinh.com.vn</a></p>
+                            </div>
+                        </li>
+                        <li>
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <strong>Giờ làm việc:</strong>
+                                <p>Thứ 2 - Thứ 7 (8:00 - 17:00)</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <div class="secondary-cta">
+                        <a href="#" class="btn-download">
+                            <i class="fas fa-file-pdf"></i> Tải Hồ sơ năng lực (Profile)
+                        </a>
+                    </div>
+                </div>
+
+                <div class="map-wrapper animate-fade-in" style="animation-delay: 0.4s">
+                    <iframe
+                        src="https://www.google.com/maps?q=Lô+BT1+Ngõ+191+đường+Phúc+Lợi,+P.+Phúc+Lợi,+Q.+Long+Biên,+Hà+Nội&output=embed"
+                        width="100%" height="350" style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+            </div>
+
+            <!-- Right Column: Form -->
+            <div class="contact-right animate-fade-in" style="animation-delay: 0.4s">
+                <div class="form-wrapper">
+                    <h3>Gửi Yêu Cầu Tư Vấn</h3>
+                    <p class="form-desc">Hương Việt Sinh luôn rộng mở đón tiếp quý đối tác, các bậc cha mẹ phụ huynh tham quan các cơ sở sản xuất. Nếu bạn có bất kỳ thắc mắc nào, vui lòng điền form dưới đây để được phản hồi sớm nhất.</p>
+
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="fullname">Họ và tên</label>
+                            <input type="text" id="fullname" name="fullname" placeholder="Nhập họ tên của bạn">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Số điện thoại <span class="required">*</span></label>
+                            <input type="tel" id="phone" name="phone" placeholder="Nhập số điện thoại" required pattern="[0-9]{10,11}">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" placeholder="Nhập địa chỉ email">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="org">Đơn vị công tác</label>
+                            <select id="org" name="org">
+                                <option value="" disabled selected>Chọn loại đơn vị</option>
+                                <option value="school">Trường học</option>
+                                <option value="company">Doanh nghiệp</option>
+                                <option value="other">Khác</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Nội dung lời nhắn</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Bạn cần tư vấn về dịch vụ nào?"></textarea>
+                        </div>
+
+                        <button type="submit" class="btn-submit">GỬI YÊU CẦU</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Floating Buttons -->
+<div class="floating-buttons">
+    <a href="https://zalo.me/0963826668" target="_blank" class="float-btn zalo" title="Chat Zalo">
+        <span class="icon-text">Zalo</span>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Icon_of_Zalo.svg" alt="Zalo">
+    </a>
+    <a href="#" target="_blank" class="float-btn messenger" title="Chat Messenger">
+        <span class="icon-text">Messenger</span>
+        <i class="fab fa-facebook-messenger"></i>
+    </a>
+</div>
+
+<!-- Sticky Mobile Call Button -->
+<div class="sticky-mobile-cta">
+    <a href="tel:0963826668" class="btn-call-sticky">
+        <i class="fas fa-phone-alt"></i> Gọi Ngay 0963.826.668
+    </a>
+</div>
+
+@section Scripts {
+    <script src="~/js/contact.js"></script>
+}

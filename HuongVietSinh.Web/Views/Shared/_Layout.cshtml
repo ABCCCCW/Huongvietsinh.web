@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"] - Hương Việt Sinh</title>
+    <link rel="stylesheet" href="~/css/common.css">
+    @await RenderSectionAsync("Styles", required: false)
+    <link rel="icon" type="image/png" href="~/image/favicon.png">
+</head>
+<body>
+
+    <header class="main-header">
+        <div class="container">
+            <a asp-controller="Home" asp-action="Index" class="brand-logo">
+                <img src="~/image/logo.png" alt="Hương Việt Sinh" style="max-height:50px;margin-right:10px;">
+                <span style="font-weight:700;font-size:20px;color:#e21e26;">HƯƠNG VIỆT SINH</span>
+            </a>
+            <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
+            <nav class="nav-menu">
+                <a asp-controller="Home" asp-action="Index" class="nav-link">Trang chủ</a>
+                <a asp-controller="Home" asp-action="About" class="nav-link">About us</a>
+                <a asp-controller="Services" asp-action="Ecosystem" class="nav-link">Hệ sinh thái</a>
+                <a asp-controller="Services" asp-action="Index" class="nav-link">Dịch vụ</a>
+                <a asp-controller="News" asp-action="Index" class="nav-link">Tin tức</a>
+                <a asp-controller="Contact" asp-action="Index" class="nav-link">Liên hệ</a>
+            </nav>
+        </div>
+    </header>
+
+    @RenderBody()
+
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col footer-info">
+                    <h4>Công ty TNHH HƯƠNG VIỆT SINH</h4>
+                    <p><i class="fas fa-map-marker-alt"></i> Số 27, ngõ 81 Lĩnh Nam, Hoàng Mai, Hà Nội</p>
+                    <p><i class="fas fa-phone-alt"></i> 0963.826.668</p>
+                    <p><i class="fas fa-envelope"></i> huongvietsinh@gmail.com</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4>VỀ CHÚNG TÔI</h4>
+                    <ul>
+                        <li><a href="#">Giới thiệu chung</a></li>
+                        <li><a href="#">Hồ sơ năng lực</a></li>
+                        <li><a href="#">Chứng nhận chất lượng</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4>HỆ SINH THÁI</h4>
+                    <ul>
+                        <li><a asp-controller="Services" asp-action="Catering">Suất ăn học đường</a></li>
+                        <li><a asp-controller="Services" asp-action="Events">Tổ chức sự kiện</a></li>
+                        <li><a asp-controller="Services" asp-action="Products">Thực phẩm an toàn</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4>TUYỂN DỤNG</h4>
+                    <ul>
+                        <li><a asp-controller="Recruitment" asp-action="Index">Vị trí đang tuyển</a></li>
+                        <li><a asp-controller="Recruitment" asp-action="Index">Quy trình ứng tuyển</a></li>
+                        <li><a asp-controller="Recruitment" asp-action="Index">Môi trường làm việc</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col footer-links">
+                    <h4>HỖ TRỢ</h4>
+                    <ul>
+                        <li><a asp-controller="News" asp-action="Index">Tin tức</a></li>
+                        <li><a asp-controller="Contact" asp-action="Index">Liên hệ</a></li>
+                        <li><a href="#">Chính sách bảo mật</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Huong Viet Sinh Co., Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="~/js/common.js"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

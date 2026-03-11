@@ -1,0 +1,402 @@
+/* d:/web/css/recruitment.css */
+
+/* Banner */
+.recruitment-banner {
+    background-image: url('/image/news/hvs-hoat-dong-noi-bo.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--white);
+    margin-bottom: 0;
+}
+
+.banner-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, rgba(226, 30, 38, 0) 10%, rgba(226, 30, 38, 0.9) 70%, rgba(226, 30, 38, 1) 100%);
+    z-index: 1;
+}
+
+.recruitment-banner .banner-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+    padding: 0 20px;
+}
+
+.recruitment-banner h1 {
+    font-size: 2.8rem;
+    color: var(--white);
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.recruitment-banner p {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 0 0 auto;
+    /* Push to right */
+    text-align: right;
+}
+
+/* Three Reasons */
+.reasons-section {
+    background-color: var(--background-light);
+    margin-top: -60px;
+    /* Overlap banner effect */
+    position: relative;
+    z-index: 3;
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+
+.reasons-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.reason-card {
+    background-color: var(--white);
+    padding: 40px 20px;
+    border-radius: var(--radius);
+    text-align: center;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.reason-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-lg);
+}
+
+.reason-icon {
+    width: 80px;
+    height: 80px;
+    background-color: #fdeaea;
+    /* Light green tint */
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    color: var(--primary-color);
+    font-size: 2rem;
+}
+
+.reason-card h3 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+}
+
+.reason-card p {
+    color: var(--text-light);
+    font-size: 0.95rem;
+}
+
+/* Job Listing */
+.job-listing-section {
+    background-color: var(--white);
+}
+
+.job-filters {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 40px;
+    flex-wrap: wrap;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border: 1px solid var(--border-color);
+    border-radius: 30px;
+    background-color: var(--white);
+    color: var(--text-light);
+    cursor: pointer;
+    font-weight: 500;
+    transition: var(--transition);
+    font-family: 'Inter', sans-serif;
+}
+
+.filter-btn:hover,
+.filter-btn.active {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-color: var(--primary-color);
+}
+
+.job-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 30px;
+}
+
+.job-card {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: 25px;
+    transition: var(--transition);
+    position: relative;
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+}
+
+.job-card:hover {
+    border-color: var(--accent-color);
+    box-shadow: var(--shadow-md);
+}
+
+.job-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background-color: red;
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    font-weight: 700;
+}
+
+.job-title {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+    padding-right: 20px;
+    min-height: 3.2rem;
+    /* Keep height consistent */
+}
+
+.job-meta {
+    margin-bottom: 20px;
+    color: var(--text-light);
+    font-size: 0.9rem;
+}
+
+.job-meta span {
+    display: block;
+    margin-bottom: 8px;
+}
+
+.job-meta i {
+    width: 20px;
+    color: var(--accent-color);
+    text-align: center;
+    margin-right: 5px;
+}
+
+.salary {
+    color: var(--primary-color) !important;
+    font-weight: 700;
+}
+
+.job-card .btn {
+    margin-top: auto;
+}
+
+/* Process Flow */
+.process-section {
+    background-color: var(--background-light);
+}
+
+.process-steps {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 20px 0;
+    position: relative;
+}
+
+.step-item {
+    text-align: center;
+    flex: 1;
+    position: relative;
+    z-index: 2;
+    padding: 0 10px;
+}
+
+.step-icon {
+    width: 60px;
+    height: 60px;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border-radius: 50%;
+    margin: 0 auto 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border: 4px solid var(--white);
+    box-shadow: 0 0 0 4px #fdeaea;
+}
+
+.step-connector {
+    flex: 1;
+    height: 2px;
+    background-color: #ccc;
+    margin-top: 30px;
+    /* Align with center of icon */
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .process-steps {
+        flex-direction: column;
+        gap: 30px;
+        align-items: center;
+    }
+
+    .step-connector {
+        width: 2px;
+        height: 40px;
+        margin: 0;
+        flex: none;
+    }
+
+    .reasons-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .recruitment-banner h1 {
+        font-size: 1.8rem;
+    }
+
+    .recruitment-banner p {
+        font-size: 1rem;
+    }
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 2000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(5px);
+}
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 5% auto;
+    padding: 0;
+    border: 1px solid #888;
+    width: 90%;
+    max-width: 800px;
+    border-radius: var(--radius);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    animation: slideDown 0.4s ease;
+}
+
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.close-modal {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin: 10px 20px;
+    cursor: pointer;
+}
+
+.close-modal:hover,
+.close-modal:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal-body {
+    padding: 30px 40px 50px;
+}
+
+.modal-body h2 {
+    color: var(--primary-color);
+    margin-bottom: 20px;
+    padding-right: 30px;
+}
+
+.modal-body hr {
+    margin: 20px 0;
+    border: 0;
+    border-top: 1px solid #eee;
+}
+
+.job-description ul {
+    list-style: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.job-description li {
+    margin-bottom: 8px;
+}
+
+.modal-actions {
+    margin-top: 30px;
+    text-align: center;
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .recruitment-banner { height: 460px; }
+    .recruitment-banner h1 { font-size: 3.2rem; }
+    .recruitment-banner p { font-size: 1.5rem; }
+    .reasons-grid { gap: 36px; }
+    .reason-card { padding: 50px 28px; }
+    .reason-icon { width: 90px; height: 90px; font-size: 2.2rem; }
+    .reason-card h3 { font-size: 1.4rem; }
+    .reason-card p { font-size: 1rem; }
+    .job-grid { grid-template-columns: repeat(auto-fill, minmax(380px, 1fr)); gap: 36px; }
+    .job-title { font-size: 1.3rem; }
+    .step-icon { width: 70px; height: 70px; font-size: 1.7rem; }
+    .modal-content { max-width: 900px; }
+}
+
+@media (min-width: 1920px) {
+    .recruitment-banner { height: 520px; }
+    .recruitment-banner h1 { font-size: 3.6rem; }
+    .recruitment-banner p { font-size: 1.6rem; }
+    .reason-card { padding: 60px 34px; }
+    .reason-icon { width: 100px; height: 100px; font-size: 2.5rem; }
+    .reason-card h3 { font-size: 1.55rem; }
+    .reason-card p { font-size: 1.05rem; }
+    .job-card { padding: 30px; }
+    .job-title { font-size: 1.4rem; }
+    .job-meta { font-size: 1rem; }
+    .step-icon { width: 80px; height: 80px; font-size: 1.8rem; }
+    .step-item h4 { font-size: 1.15rem; }
+    .modal-content { max-width: 1000px; }
+    .modal-body { padding: 40px 50px 60px; }
+}

@@ -1,0 +1,442 @@
+@{
+    ViewData["Title"] = "Cung ứng thực phẩm an toàn";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/services.css?v=4">
+}
+
+<!-- Banner -->
+<section class="services-banner">
+    <div class="banner-overlay"></div>
+    <div class="container banner-content">
+        <h1 class="animate-fade-in">Cung ứng thực phẩm an toàn</h1>
+        <p class="animate-fade-in" style="animation-delay: 0.2s">Mỗi sản phẩm là một lời cam kết về sự an lành cho bữa cơm Việt</p>
+    </div>
+</section>
+
+<!-- Breadcrumb -->
+<div class="breadcrumb">
+    <div class="container">
+        <a asp-controller="Home" asp-action="Index">Trang chủ</a>
+        <span>/</span>
+        <a asp-controller="Services" asp-action="Index">Dịch vụ</a>
+        <span>/</span>
+        <strong>Cung ứng thực phẩm an toàn</strong>
+    </div>
+</div>
+
+<!-- Zone 1: Product Grid -->
+<section class="section products-section">
+    <div class="container">
+        <h2 class="section-title">Danh Mục Sản Phẩm</h2>
+        <p class="section-subtitle">Nơi trưng bày các sản phẩm đạt chuẩn của Hương Việt Sinh. Di chuột hoặc chạm để xem chi tiết.</p>
+
+        <div class="products-carousel">
+            <button type="button" class="products-arrow prev" aria-label="Sản phẩm trước">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="products-viewport">
+                <div class="products-grid" id="productsGrid">
+            <!-- Product 1 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP 4 Sao</span>
+                            <img src="~/image/news/hvs-day-chuyen-che-bien.jpg" alt="Bún tươi HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Bún Tươi HVS</h4>
+                            <p>100% gạo Khang Dân, không hàn the</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Bún Tươi HVS</h4>
+                        <p>Sợi bún trắng ngà tự nhiên, không chất tẩy trắng. Sản xuất từ 100% gạo Khang Dân chất lượng cao, đảm bảo an toàn thực phẩm tuyệt đối.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 2 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag non-gmo">Non-GMO</span>
+                            <img src="~/image/news/hvs-nguyen-lieu-tuoi.jpg" alt="Đậu phụ sạch">
+                        </div>
+                        <div class="product-info">
+                            <h4>Đậu Phụ Sạch</h4>
+                            <p>Đậu tương không biến đổi gen</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Đậu Phụ Sạch</h4>
+                        <p>Sản xuất từ đậu tương không biến đổi gen (Non-GMO). Quy trình sản xuất khép kín, đảm bảo vệ sinh an toàn thực phẩm.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 3 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP 4 Sao</span>
+                            <img src="~/image/news/hvs-kiem-tra-chat-luong.jpg" alt="Giò lụa HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Giò Lụa HVS</h4>
+                            <p>Thịt lợn, nước mắm cốt, không hàn the</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Giò Lụa HVS</h4>
+                        <p>Được chế biến từ thịt lợn tươi ngon, nước mắm cốt truyền thống. Hoàn toàn không sử dụng hàn the hay chất bảo quản.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 4 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <img src="~/image/news/hvs-nha-may-san-xuat.jpg" alt="Mọc bò viên HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Mọc Bò Viên HVS</h4>
+                            <p>Thịt lợn, thịt bò, không chất bảo quản</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Mọc Bò Viên HVS</h4>
+                        <p>Thịt lợn, thịt bò, mỡ phần, gia vị tự nhiên. Hoàn toàn không sử dụng chất bảo quản, giữ trọn hương vị tươi ngon.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 5 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP 4 Sao</span>
+                            <img src="~/image/news/hvs-so-che-rau-cu.jpg" alt="Xúc xích củ quả HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Xúc Xích Củ Quả HVS</h4>
+                            <p>Thịt gà, thịt lợn, ngô, cà rốt</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Xúc Xích Củ Quả HVS</h4>
+                        <p>Thịt gà, thịt lợn, ngô ngọt, cà rốt được nêm vừa ăn. Không sử dụng chất bảo quản, phù hợp cho trẻ em.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 6 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP</span>
+                            <img src="~/image/news/hvs-kho-bao-quan.jpg" alt="Ruốc gà HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Ruốc Gà HVS</h4>
+                            <p>Ruốc gà thơm ngon, đạt chuẩn OCOP</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Ruốc Gà HVS</h4>
+                        <p>Được chế biến từ thịt gà tươi, xé sợi mịn, nêm nếm vừa miệng. Sản phẩm đạt chuẩn OCOP, an toàn cho mọi lứa tuổi.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 7 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP</span>
+                            <img src="~/image/news/hvs-quy-trinh-mot-chieu.jpg" alt="Giò gà HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Giò Gà HVS</h4>
+                            <p>Giò gà truyền thống, đạt chuẩn OCOP</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Giò Gà HVS</h4>
+                        <p>Giò gà được chế biến theo công thức truyền thống, thịt gà tươi ngon kết hợp gia vị đặc trưng. Không hàn the, không bảo quản.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 8 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP</span>
+                            <img src="~/image/news/hvs-nhan-vien-bep.jpg" alt="Chả mỡ HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Chả Mỡ HVS</h4>
+                            <p>Chả mỡ thơm béo, đạt chuẩn OCOP</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Chả Mỡ HVS</h4>
+                        <p>Chả mỡ truyền thống với lớp mỡ thơm béo, thịt chắc, nêm nếm chuẩn vị. Sản phẩm đạt chứng nhận OCOP.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 9 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP</span>
+                            <img src="~/image/news/hvs-van-chuyen-suat-an.jpg" alt="Chả lụa HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Chả Lụa HVS</h4>
+                            <p>Chả lụa truyền thống, đạt chuẩn OCOP</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Chả Lụa HVS</h4>
+                        <p>Chả lụa chế biến từ thịt lợn tươi, giã nhuyễn mịn màng. Gói trong lá chuối, giữ trọn hương vị truyền thống Việt Nam.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 10 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP</span>
+                            <img src="~/image/news/hvs-bua-an-hoc-sinh.jpg" alt="Chả bì HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Chả Bì HVS</h4>
+                            <p>Chả bì giòn dai, đạt chuẩn OCOP</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Chả Bì HVS</h4>
+                        <p>Chả bì với lớp bì lợn giòn dai, kết hợp thịt nạc thơm ngon. Sản phẩm đạt chuẩn OCOP, không chất bảo quản.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 11 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP</span>
+                            <img src="~/image/news/hvs-chia-suat-an.jpg" alt="Giò xào HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Giò Xào HVS</h4>
+                            <p>Giò xào thơm ngon, đạt chuẩn OCOP</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Giò Xào HVS</h4>
+                        <p>Giò xào phong phú với nhân thịt, mộc nhĩ, nấm hương. Gói trong lá chuối truyền thống, hương vị đậm đà.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Product 12 -->
+            <div class="product-card">
+                <div class="product-card-inner">
+                    <div class="product-front">
+                        <div class="product-image">
+                            <span class="product-tag ocop">OCOP</span>
+                            <img src="~/image/news/hvs-doi-ngu-nhan-vien.jpg" alt="Ruốc heo HVS">
+                        </div>
+                        <div class="product-info">
+                            <h4>Ruốc Heo HVS</h4>
+                            <p>Ruốc heo thơm ngon, đạt chuẩn OCOP</p>
+                            <span class="flip-hint"><i class="fas fa-sync-alt"></i> Lật để xem thêm</span>
+                        </div>
+                    </div>
+                    <div class="product-back">
+                        <i class="fas fa-leaf back-icon"></i>
+                        <h4>Ruốc Heo HVS</h4>
+                        <p>Ruốc heo sợi mịn, nêm nếm đậm đà. Chế biến từ thịt heo tươi sạch, phù hợp ăn kèm cơm hoặc làm nhân bánh.</p>
+                    </div>
+                </div>
+            </div>
+                </div>
+            </div>
+
+            <button type="button" class="products-arrow next" aria-label="Sản phẩm tiếp theo">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- Zone 2: Bảo chứng chất lượng -->
+<section class="section certificates-section">
+    <div class="container">
+        <h2 class="section-title">Bảo Chứng Chất Lượng</h2>
+        <p class="section-subtitle">Các giấy chứng nhận và tiêu chuẩn mà sản phẩm Hương Việt Sinh đạt được.</p>
+
+        <div class="certificates-grid">
+            <div class="cert-card animate-fade-in">
+                <div class="cert-icon">
+                    <i class="fas fa-star"></i>
+                </div>
+                <h4>OCOP 4 Sao</h4>
+                <p>Chương trình Mỗi xã một sản phẩm - Bộ Nông nghiệp</p>
+            </div>
+            <div class="cert-card animate-fade-in" style="animation-delay: 0.1s">
+                <div class="cert-icon">
+                    <i class="fas fa-certificate"></i>
+                </div>
+                <h4>VietGAP</h4>
+                <p>Thực hành sản xuất nông nghiệp tốt tại Việt Nam</p>
+            </div>
+            <div class="cert-card animate-fade-in" style="animation-delay: 0.2s">
+                <div class="cert-icon">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <h4>ATTP</h4>
+                <p>Giấy chứng nhận cơ sở đủ điều kiện an toàn thực phẩm</p>
+            </div>
+            <div class="cert-card animate-fade-in" style="animation-delay: 0.3s">
+                <div class="cert-icon">
+                    <i class="fas fa-check-double"></i>
+                </div>
+                <h4>ISO 22000</h4>
+                <p>Hệ thống quản lý an toàn thực phẩm quốc tế</p>
+            </div>
+            <div class="cert-card animate-fade-in" style="animation-delay: 0.4s">
+                <div class="cert-icon">
+                    <i class="fas fa-file-alt"></i>
+                </div>
+                <h4>Đăng Ký Kinh Doanh</h4>
+                <p>Giấy phép đầy đủ, minh bạch pháp lý</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="cta-section">
+    <div class="container">
+        <h2>Đặt Hàng Thực Phẩm An Toàn</h2>
+        <p>Liên hệ ngay để được tư vấn và báo giá sỉ/lẻ các sản phẩm thực phẩm Hương Việt Sinh.</p>
+        <div class="cta-buttons">
+            <a asp-controller="Contact" asp-action="Index" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Liên Hệ Đặt Hàng
+            </a>
+            <a href="tel:0963826668" class="btn btn-secondary">
+                <i class="fas fa-phone-alt"></i> Gọi 0963.826.668
+            </a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var grid = document.getElementById('productsGrid');
+    if (!grid) return;
+
+    var allCards = Array.from(grid.querySelectorAll('.product-card'));
+    var prevBtn = document.querySelector('.products-arrow.prev');
+    var nextBtn = document.querySelector('.products-arrow.next');
+    var total = allCards.length;
+    var startIdx = 0;
+    var timer = null;
+
+    function getColsAndVisible() {
+        var w = window.innerWidth;
+        if (w <= 480) return { cols: 2, visible: 2 };
+        if (w <= 768) return { cols: 2, visible: 4 };
+        return { cols: 3, visible: 6 };
+    }
+
+    function render() {
+        var cfg = getColsAndVisible();
+        grid.style.gridTemplateColumns = 'repeat(' + cfg.cols + ', 1fr)';
+
+        for (var i = 0; i < total; i++) {
+            var offset = (i - startIdx + total) % total;
+            allCards[i].style.display = (offset < cfg.visible) ? '' : 'none';
+        }
+    }
+
+    function goNext() {
+        var cfg = getColsAndVisible();
+        startIdx = (startIdx + cfg.visible) % total;
+        render();
+    }
+
+    function goPrev() {
+        var cfg = getColsAndVisible();
+        startIdx = (startIdx - cfg.visible + total) % total;
+        render();
+    }
+
+    function startAuto() {
+        if (timer) clearInterval(timer);
+        timer = setInterval(goNext, 7000);
+    }
+
+    if (prevBtn) {
+        prevBtn.addEventListener('click', function() { goPrev(); startAuto(); });
+    }
+    if (nextBtn) {
+        nextBtn.addEventListener('click', function() { goNext(); startAuto(); });
+    }
+
+    window.addEventListener('resize', render);
+
+    allCards.forEach(function(card) {
+        card.addEventListener('click', function() {
+            if (window.innerWidth <= 992) card.classList.toggle('flipped');
+        });
+    });
+
+    render();
+    startAuto();
+});
+</script>
+}

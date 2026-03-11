@@ -1,0 +1,472 @@
+/* ========================================
+   CONTACT PAGE STYLES
+   ======================================== */
+
+/* Banner */
+.page-banner {
+    background-image: url('/image/news/hvs-truong-hoc-doi-tac.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 300px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: var(--white);
+}
+
+.banner-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(135deg, rgba(226,30,38,0.85) 0%, rgba(180,20,28,0.75) 100%);
+    z-index: 1;
+}
+
+.banner-content {
+    position: relative;
+    z-index: 2;
+}
+
+.banner-content h1 {
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.3);
+}
+
+.banner-content p {
+    font-size: 1.2rem;
+    font-weight: 300;
+}
+
+/* Contact Section */
+.contact-section {
+    background: var(--white);
+}
+
+/* Contact Grid: 2 columns */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+/* --- Left Column --- */
+.info-block {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    padding: 32px;
+    margin-bottom: 28px;
+    box-shadow: var(--shadow-sm);
+}
+
+.section-title-left {
+    font-size: 1.6rem;
+    margin-bottom: 24px;
+    padding-bottom: 12px;
+    position: relative;
+}
+
+.section-title-left::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 60px;
+    height: 3px;
+    background: var(--primary-color);
+    border-radius: 2px;
+}
+
+.info-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-list li {
+    display: flex;
+    gap: 16px;
+    margin-bottom: 22px;
+    align-items: flex-start;
+}
+
+.info-list li:last-child {
+    margin-bottom: 0;
+}
+
+.info-list i {
+    width: 44px;
+    height: 44px;
+    background: var(--background-light);
+    color: var(--primary-color);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    flex-shrink: 0;
+    border: 1px solid var(--border-color);
+}
+
+.info-list strong {
+    display: block;
+    color: var(--text-color);
+    font-size: 0.88rem;
+    margin-bottom: 3px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+.info-list p {
+    margin: 0;
+    color: var(--text-light);
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+.info-list a {
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transition);
+}
+
+.info-list a:hover {
+    color: var(--secondary-color);
+}
+
+/* Download Profile Button */
+.btn-download {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 24px;
+    padding: 14px 28px;
+    background: var(--white);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-download:hover {
+    background: var(--primary-color);
+    color: var(--white);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 16px rgba(226,30,38,0.25);
+}
+
+.btn-download i {
+    font-size: 1.2rem;
+}
+
+/* Google Map */
+.map-wrapper {
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--border-color);
+    box-shadow: var(--shadow-sm);
+    height: 350px;
+}
+
+/* --- Right Column: Form --- */
+.contact-right {
+    background: var(--white);
+    border: 1px solid var(--border-color);
+    border-radius: 14px;
+    box-shadow: var(--shadow-sm);
+    padding: 36px;
+    border-top: 4px solid var(--secondary-color);
+    position: sticky;
+    top: 100px;
+}
+
+.form-wrapper h3 {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: var(--text-color);
+}
+
+.form-desc {
+    text-align: center;
+    color: var(--text-light);
+    margin-bottom: 28px;
+    font-size: 0.92rem;
+    line-height: 1.7;
+}
+
+.form-group {
+    margin-bottom: 18px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 7px;
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--text-color);
+}
+
+.required {
+    color: var(--primary-color);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    background: var(--background-light);
+    font-size: 0.95rem;
+    font-family: 'Inter', sans-serif;
+    transition: var(--transition);
+    color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    border-color: var(--secondary-color);
+    box-shadow: 0 0 0 3px rgba(242,190,26,0.15);
+    background: var(--white);
+    outline: none;
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 100px;
+}
+
+/* Submit Button - Yellow brand */
+.btn-submit {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    background: #fdbc0a;
+    color: #333;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.05rem;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    letter-spacing: 0.5px;
+    transition: var(--transition);
+    margin-top: 6px;
+}
+
+.btn-submit:hover {
+    background: #e9ab00;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(253,188,10,0.35);
+}
+
+/* ========================================
+   FLOATING BUTTONS
+   ======================================== */
+.floating-buttons {
+    position: fixed;
+    right: 20px;
+    bottom: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+    z-index: 999;
+}
+
+.float-btn {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 14px rgba(0,0,0,0.15);
+    transition: var(--transition);
+    position: relative;
+    background: var(--white);
+    text-decoration: none;
+    border: 1px solid var(--border-color);
+}
+
+.float-btn:hover {
+    transform: scale(1.12);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+}
+
+.float-btn .icon-text {
+    position: absolute;
+    right: 62px;
+    background: #333;
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 0.8rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: var(--transition);
+    white-space: nowrap;
+}
+
+.float-btn:hover .icon-text {
+    opacity: 1;
+    visibility: visible;
+    right: 66px;
+}
+
+.float-btn.zalo img {
+    width: 30px;
+    height: 30px;
+}
+
+.float-btn.messenger {
+    background: #0084FF;
+    color: white;
+    font-size: 24px;
+    border: none;
+}
+
+/* ========================================
+   STICKY MOBILE CTA
+   ======================================== */
+.sticky-mobile-cta {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1001;
+    padding: 10px 16px;
+    background: var(--white);
+    box-shadow: 0 -2px 12px rgba(0,0,0,0.1);
+}
+
+.btn-call-sticky {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.btn-call-sticky:hover {
+    background: #c4181f;
+}
+
+/* ========================================
+   RESPONSIVE
+   ======================================== */
+@media (max-width: 992px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 36px;
+    }
+
+    .contact-right {
+        position: static;
+    }
+
+    /* brand section đã xoá */
+}
+
+@media (max-width: 768px) {
+    .page-banner {
+        height: 220px;
+    }
+
+    .banner-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .banner-content p {
+        font-size: 1rem;
+    }
+
+    .contact-right {
+        padding: 24px;
+    }
+
+    .info-block {
+        padding: 24px;
+    }
+
+    .sticky-mobile-cta {
+        display: block;
+    }
+
+    .main-footer {
+        padding-bottom: 80px;
+    }
+
+    .floating-buttons {
+        bottom: 85px;
+        right: 15px;
+    }
+
+    .float-btn {
+        width: 46px;
+        height: 46px;
+    }
+
+    /* brand section đã xoá */
+}
+
+@media (max-width: 480px) {
+}
+
+/* Large screens */
+@media (min-width: 1400px) {
+    .page-banner { height: 340px; }
+    .banner-content h1 { font-size: 2.8rem; }
+    .banner-content p { font-size: 1.3rem; }
+    .contact-grid { gap: 60px; }
+    .info-block { padding: 36px; }
+    .section-title-left { font-size: 1.8rem; }
+    .contact-right { padding: 42px; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { padding: 14px 18px; font-size: 1rem; }
+    .float-btn { width: 56px; height: 56px; }
+
+    /* brand section đã xoá */
+}
+
+@media (min-width: 1920px) {
+    .page-banner { height: 400px; }
+    .banner-content h1 { font-size: 3.2rem; }
+    .banner-content p { font-size: 1.4rem; }
+    .contact-grid { gap: 70px; }
+    .info-block { padding: 42px; }
+    .section-title-left { font-size: 2rem; }
+    .info-list i { width: 48px; height: 48px; font-size: 1.1rem; }
+    .contact-right { padding: 50px; }
+    .form-group label { font-size: 0.95rem; }
+    .form-group input,
+    .form-group select,
+    .form-group textarea { padding: 16px 20px; font-size: 1.05rem; }
+    .map-wrapper { height: 420px; }
+    .float-btn { width: 60px; height: 60px; }
+    .float-btn.zalo img { width: 36px; height: 36px; }
+    .float-btn.messenger { font-size: 28px; }
+    .btn-submit { font-size: 1.1rem; padding: 18px; }
+
+    /* brand section đã xoá */
+}
