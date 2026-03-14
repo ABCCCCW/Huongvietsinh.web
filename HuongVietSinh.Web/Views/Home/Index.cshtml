@@ -2,10 +2,320 @@
     ViewData["Title"] = "Trang Chủ";
 }
 
-<section style="min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:40px 20px;">
-    <div>
-        <i class="fas fa-hard-hat" style="font-size:3rem;color:var(--secondary-color);margin-bottom:20px;"></i>
-        <h1 style="color:var(--primary-color);margin-bottom:12px;">Trang Chủ</h1>
-        <p style="color:var(--text-light);font-size:1.1rem;">Nội dung đang được cập nhật...</p>
+@section Styles {
+    <link rel="stylesheet" href="~/css/home.css">
+}
+
+<!-- ===== HERO ===== -->
+<section class="hero" id="hero">
+    <div class="hero-particles">
+        <div class="hero-particle"></div>
+        <div class="hero-particle"></div>
+        <div class="hero-particle"></div>
+        <div class="hero-particle"></div>
+        <div class="hero-particle"></div>
+        <div class="hero-particle"></div>
+        <div class="hero-particle"></div>
+        <div class="hero-particle"></div>
+    </div>
+
+    <div class="hero-content">
+        <div class="hero-badge">
+            <i class="fas fa-star"></i> 13+ năm tận tâm vì sức khỏe cộng đồng
+        </div>
+        <h1>
+            Kiến Tạo <span class="text-highlight">Bữa Ăn An Toàn</span><br>
+            Cho Thế Hệ Tương Lai
+        </h1>
+        <p class="hero-desc">
+            Từ nông trại VietGAP đến bàn ăn học đường — Hương Việt Sinh cam kết mang đến
+            nguồn thực phẩm sạch, dinh dưỡng khoa học và an toàn tuyệt đối cho mỗi bữa ăn.
+        </p>
+        <div class="hero-cta">
+            <a asp-controller="Services" asp-action="Index" class="btn btn-primary">
+                <i class="fas fa-utensils"></i> Khám Phá Dịch Vụ
+            </a>
+            <a asp-controller="Contact" asp-action="Index" class="btn-ghost">
+                <i class="fas fa-paper-plane"></i> Liên Hệ Tư Vấn
+            </a>
+        </div>
+    </div>
+
+    <div class="hero-scroll">
+        <i class="fas fa-chevron-down"></i>
     </div>
 </section>
+
+<!-- ===== SỐ LIỆU NỔI BẬT ===== -->
+<section class="stats-section">
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item reveal">
+                <div class="stat-icon icon-years"><i class="fas fa-calendar-check"></i></div>
+                <div class="stat-number"><span class="counter" data-target="13">0</span><span class="counter-suffix">+</span></div>
+                <div class="stat-label">Năm Kinh Nghiệm</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-icon icon-schools"><i class="fas fa-school"></i></div>
+                <div class="stat-number"><span class="counter" data-target="50">0</span><span class="counter-suffix">+</span></div>
+                <div class="stat-label">Trường Học Đối Tác</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-icon icon-meals"><i class="fas fa-bowl-food"></i></div>
+                <div class="stat-number"><span class="counter" data-target="30000">0</span><span class="counter-suffix">+</span></div>
+                <div class="stat-label">Suất Ăn Mỗi Ngày</div>
+            </div>
+            <div class="stat-item reveal">
+                <div class="stat-icon icon-ocop"><i class="fas fa-award"></i></div>
+                <div class="stat-number"><span class="counter" data-target="100">0</span><span class="counter-suffix">+</span></div>
+                <div class="stat-label">Sản Phẩm OCOP</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== DỊCH VỤ CHÍNH ===== -->
+<section class="home-services">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2>Dịch Vụ Của Chúng Tôi</h2>
+            <div class="section-line"></div>
+            <p>Giải pháp ẩm thực toàn diện, đảm bảo an toàn và chất lượng cho mọi nhu cầu</p>
+        </div>
+
+        <div class="services-grid">
+            <div class="service-card reveal">
+                <div class="service-card-img">
+                    <img src="~/image/no-image.png" alt="Cung cấp suất ăn học đường">
+                    <div class="service-icon-float"><i class="fas fa-utensils"></i></div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Suất Ăn Học Đường</h3>
+                    <p>Bữa ăn dinh dưỡng được tính toán khoa học, chế biến từ nguồn nguyên liệu sạch cho học sinh mầm non và tiểu học.</p>
+                    <a asp-controller="Services" asp-action="Catering" class="card-link">
+                        Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card reveal" style="transition-delay: 0.15s;">
+                <div class="service-card-img">
+                    <img src="~/image/no-image.png" alt="Tổ chức sự kiện tiệc">
+                    <div class="service-icon-float"><i class="fas fa-glass-cheers"></i></div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Tổ Chức Sự Kiện & Tiệc</h3>
+                    <p>Dịch vụ tiệc buffet, liên hoan doanh nghiệp và sự kiện tập thể với chất lượng chuyên nghiệp, an toàn vệ sinh.</p>
+                    <a asp-controller="Services" asp-action="Events" class="card-link">
+                        Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="service-card reveal" style="transition-delay: 0.3s;">
+                <div class="service-card-img">
+                    <img src="~/image/no-image.png" alt="Cung ứng thực phẩm sạch">
+                    <div class="service-icon-float"><i class="fas fa-leaf"></i></div>
+                </div>
+                <div class="service-card-body">
+                    <h3>Thực Phẩm OCOP & VietGAP</h3>
+                    <p>Sản phẩm đạt chuẩn OCOP 4 sao: giò chả, xúc xích, bún phở và rau sạch VietGAP từ hệ sinh thái tự chủ.</p>
+                    <a asp-controller="Services" asp-action="Products" class="card-link">
+                        Tìm hiểu thêm <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TẠI SAO CHỌN HVS ===== -->
+<section class="why-hvs">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2>Tại Sao Chọn Hương Việt Sinh?</h2>
+            <div class="section-line"></div>
+            <p>Những giá trị cốt lõi tạo nên sự khác biệt của chúng tôi</p>
+        </div>
+
+        <div class="why-grid">
+            <div class="why-card reveal">
+                <div class="why-card-icon wc-1"><i class="fas fa-shield-alt"></i></div>
+                <div class="why-card-text">
+                    <h4>An Toàn Tuyệt Đối</h4>
+                    <p>Quy trình bếp một chiều nghiêm ngặt, kiểm soát ATTP từ nguyên liệu đến thành phẩm theo chuẩn quốc tế.</p>
+                </div>
+            </div>
+
+            <div class="why-card reveal" style="transition-delay: 0.1s;">
+                <div class="why-card-icon wc-2"><i class="fas fa-seedling"></i></div>
+                <div class="why-card-text">
+                    <h4>Nguồn Gốc Rõ Ràng</h4>
+                    <p>100% nguyên liệu từ hệ sinh thái tự chủ: nông trại VietGAP, nhà máy chế biến hiện đại.</p>
+                </div>
+            </div>
+
+            <div class="why-card reveal" style="transition-delay: 0.2s;">
+                <div class="why-card-icon wc-3"><i class="fas fa-heartbeat"></i></div>
+                <div class="why-card-text">
+                    <h4>Dinh Dưỡng Khoa Học</h4>
+                    <p>Thực đơn được chuyên gia thiết kế riêng cho từng lứa tuổi, đảm bảo đầy đủ năng lượng và calo.</p>
+                </div>
+            </div>
+
+            <div class="why-card reveal" style="transition-delay: 0.3s;">
+                <div class="why-card-icon wc-4"><i class="fas fa-truck-fast"></i></div>
+                <div class="why-card-text">
+                    <h4>Vận Chuyển Chuyên Biệt</h4>
+                    <p>Hệ thống xe lạnh chuyên dụng, đảm bảo thực phẩm tươi ngon từ bếp trung tâm đến từng điểm giao.</p>
+                </div>
+            </div>
+
+            <div class="why-card reveal" style="transition-delay: 0.4s;">
+                <div class="why-card-icon wc-5"><i class="fas fa-award"></i></div>
+                <div class="why-card-text">
+                    <h4>Chứng Nhận Uy Tín</h4>
+                    <p>Đạt chuẩn OCOP 4 sao TP Hà Nội, VietGAP và nhiều chứng nhận ATTP uy tín khác.</p>
+                </div>
+            </div>
+
+            <div class="why-card reveal" style="transition-delay: 0.5s;">
+                <div class="why-card-icon wc-6"><i class="fas fa-users"></i></div>
+                <div class="why-card-text">
+                    <h4>Đội Ngũ Tận Tâm</h4>
+                    <p>Hơn 500 nhân viên được đào tạo chuyên nghiệp, phục vụ tận tâm với tinh thần "như chăm sóc con mình".</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== HỆ SINH THÁI ===== -->
+<section class="eco-flow">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2>Hệ Sinh Thái Khép Kín</h2>
+            <div class="section-line"></div>
+            <p>Từ trang trại đến bàn ăn — Chuỗi cung ứng an toàn tuyệt đối</p>
+        </div>
+
+        <div class="flow-track">
+            <div class="flow-step fs-1 reveal">
+                <div class="flow-step-icon"><i class="fas fa-tractor"></i></div>
+                <h4>Nông Trại VietGAP</h4>
+                <p>Rau sạch, trứng gà,<br>thịt lợn hữu cơ</p>
+            </div>
+            <div class="flow-arrow reveal"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="flow-step fs-2 reveal" style="transition-delay: 0.15s;">
+                <div class="flow-step-icon"><i class="fas fa-industry"></i></div>
+                <h4>Nhà Máy Chế Biến</h4>
+                <p>Bún phở, giò chả,<br>xúc xích OCOP</p>
+            </div>
+            <div class="flow-arrow reveal"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="flow-step fs-3 reveal" style="transition-delay: 0.3s;">
+                <div class="flow-step-icon"><i class="fas fa-fire-burner"></i></div>
+                <h4>Bếp Trung Tâm</h4>
+                <p>Quy trình một chiều,<br>kiểm soát ATTP</p>
+            </div>
+            <div class="flow-arrow reveal"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="flow-step fs-4 reveal" style="transition-delay: 0.45s;">
+                <div class="flow-step-icon"><i class="fas fa-school"></i></div>
+                <h4>Bàn Ăn Trường Học</h4>
+                <p>30,000+ suất ăn<br>mỗi ngày</p>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 40px;" class="reveal">
+            <a asp-controller="Services" asp-action="Ecosystem" class="btn btn-primary">
+                <i class="fas fa-map"></i> Khám Phá Hệ Sinh Thái
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== TIN TỨC MỚI NHẤT ===== -->
+<section class="home-news">
+    <div class="container">
+        <div class="section-header reveal">
+            <h2>Tin Tức Mới Nhất</h2>
+            <div class="section-line"></div>
+            <p>Cập nhật hoạt động, kiến thức dinh dưỡng và câu chuyện nguồn gốc</p>
+        </div>
+
+        <div class="news-preview-grid">
+            <div class="news-preview-card reveal">
+                <div class="news-preview-thumb">
+                    <img src="~/image/news/article-demo-1.jpeg" alt="Bữa ăn học đường ngon sạch">
+                </div>
+                <div class="news-preview-body">
+                    <div class="news-meta">
+                        <span class="news-cat">Hoạt động HVS</span>
+                        <span><i class="far fa-calendar"></i> 10/03/2026</span>
+                    </div>
+                    <h3><a asp-controller="News" asp-action="Detail">Hương Việt Sinh Chăm Sóc Thế Hệ Trẻ Bằng Bữa Ăn Học Đường Ngon Sạch</a></h3>
+                    <p>Với 13 năm tận tâm, Công ty TNHH Hương Việt Sinh nỗ lực mang đến bữa ăn học đường bổ dưỡng.</p>
+                </div>
+            </div>
+
+            <div class="news-preview-card reveal" style="transition-delay: 0.15s;">
+                <div class="news-preview-thumb">
+                    <img src="~/image/no-image.png" alt="Thực đơn học đường khoa học">
+                </div>
+                <div class="news-preview-body">
+                    <div class="news-meta">
+                        <span class="news-cat">Góc Dinh dưỡng</span>
+                        <span><i class="far fa-calendar"></i> 08/03/2026</span>
+                    </div>
+                    <h3><a asp-controller="News" asp-action="Detail">Xây Dựng Thực Đơn Học Đường Khoa Học Cho Trẻ Mầm Non Và Tiểu Học</a></h3>
+                    <p>Hướng dẫn chi tiết cách thiết kế thực đơn cân bằng dinh dưỡng cho trẻ.</p>
+                </div>
+            </div>
+
+            <div class="news-preview-card reveal" style="transition-delay: 0.3s;">
+                <div class="news-preview-thumb">
+                    <img src="~/image/no-image.png" alt="Rau sạch VietGAP">
+                </div>
+                <div class="news-preview-body">
+                    <div class="news-meta">
+                        <span class="news-cat">Nguồn gốc</span>
+                        <span><i class="far fa-calendar"></i> 06/03/2026</span>
+                    </div>
+                    <h3><a asp-controller="News" asp-action="Detail">Hành Trình Rau Sạch VietGAP Từ Tiên Du Đến Bếp Ăn Học Đường</a></h3>
+                    <p>Khám phá quy trình trồng rau sạch đạt chuẩn VietGAP tại nông trại Tiên Du.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="news-more-wrap reveal">
+            <a asp-controller="News" asp-action="Index" class="btn btn-secondary">
+                <i class="fas fa-newspaper"></i> Xem Tất Cả Tin Tức
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ===== CTA LIÊN HỆ ===== -->
+<section class="home-cta">
+    <div class="container">
+        <h2 class="reveal">Bạn Cần Giải Pháp Ẩm Thực?</h2>
+        <p class="reveal" style="transition-delay: 0.15s;">
+            Liên hệ ngay với Hương Việt Sinh để nhận tư vấn miễn phí về dịch vụ suất ăn,
+            tổ chức sự kiện và cung ứng thực phẩm sạch cho đơn vị của bạn.
+        </p>
+        <div class="cta-buttons reveal" style="transition-delay: 0.3s;">
+            <a asp-controller="Contact" asp-action="Index" class="btn btn-primary">
+                <i class="fas fa-paper-plane"></i> Gửi Yêu Cầu Tư Vấn
+            </a>
+            <a href="tel:0963826668" class="btn btn-secondary">
+                <i class="fas fa-phone-alt"></i> Gọi Ngay 0963.826.668
+            </a>
+        </div>
+    </div>
+</section>
+
+@section Scripts {
+    <script src="~/js/home.js"></script>
+}

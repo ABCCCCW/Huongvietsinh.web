@@ -4,7 +4,7 @@
 
 /* --- Services Banner --- */
 .services-banner {
-    background-image: url('/image/news/hvs-truong-hoc-doi-tac.jpg');
+    background-image: url('/image/no-image.png'); /* original: hvs-truong-hoc-doi-tac.jpg */
     background-size: cover;
     background-position: center;
     height: 380px;
@@ -655,7 +655,7 @@
 
 .product-card {
     perspective: 800px;
-    height: 320px;
+    height: 400px;
     cursor: pointer;
 }
 
@@ -690,7 +690,7 @@
 }
 
 .product-front .product-image {
-    height: 180px;
+    height: 320px;
     overflow: hidden;
     position: relative;
     background: #f5f5f5;
@@ -729,15 +729,16 @@
 }
 
 .product-info {
-    padding: 14px;
+    padding: 6px 12px;
     flex: 1;
     display: flex;
     flex-direction: column;
+    justify-content: center;
 }
 
 .product-info h4 {
     font-size: 0.95rem;
-    margin-bottom: 6px;
+    margin-bottom: 2px;
     color: var(--primary-color);
 }
 
@@ -748,11 +749,10 @@
 }
 
 .flip-hint {
-    margin-top: auto;
-    font-size: 0.75rem;
+    font-size: 0.7rem;
     color: #aaa;
     text-align: center;
-    padding-top: 8px;
+    margin-top: 2px;
 }
 
 .product-back {

@@ -1,6 +1,6 @@
 /* News pages */
 .news-banner {
-    background-image: url('https://huongvietsinh.com.vn/images/slideshow/2023/11/30/compress/dsc_9630_1701331500.jpg');
+    background-image: url('/image/no-image.png'); /* original: huongvietsinh.com.vn slideshow image */
     background-size: cover;
     background-position: center;
     min-height: 300px;
