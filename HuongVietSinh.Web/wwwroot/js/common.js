@@ -1,5 +1,17 @@
 /* d:/web/js/common.js */
 document.addEventListener('DOMContentLoaded', () => {
+    // Header Scroll Effect
+    const header = document.querySelector('.main-header');
+    if (header) {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+    }
+
     // Mobile Menu Toggle
     const menuToggle = document.querySelector('.mobile-toggle');
     const navMenu = document.querySelector('.nav-menu');
@@ -8,7 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (menuToggle && navMenu) {
         menuToggle.addEventListener('click', () => {
             navMenu.classList.toggle('active');
-            
+
             // Toggle icon between bars and times
             const icon = menuToggle.querySelector('i');
             if (navMenu.classList.contains('active')) {
@@ -21,7 +33,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 body.style.overflow = 'auto';
             }
         });
-        
+
         // Close menu when clicking a link
         const navLinks = document.querySelectorAll('.nav-link');
         navLinks.forEach(link => {
@@ -40,13 +52,13 @@ document.addEventListener('DOMContentLoaded', () => {
     // Active Link Highlighting
     const currentPage = window.location.pathname.split('/').pop() || 'index.html';
     const links = document.querySelectorAll('.nav-link');
-    
+
     links.forEach(link => {
         const linkHref = link.getAttribute('href');
         if (linkHref === currentPage || (currentPage === '' && linkHref === 'index.html') || (currentPage === 'index.html' && linkHref === 'contact.html')) {
             // Logic handled by manual class in HTML mostly, but this helps
-            if(linkHref === currentPage) {
-               link.classList.add('active');
+            if (linkHref === currentPage) {
+                link.classList.add('active');
             }
         }
     });

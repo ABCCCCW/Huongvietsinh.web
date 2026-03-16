@@ -1,0 +1,237 @@
+@{
+    ViewData["Title"] = "Câu hỏi thường gặp";
+}
+
+@section Styles {
+    <link rel="stylesheet" href="~/css/faq.css" asp-append-version="true" />
+}
+
+<!-- BANNER -->
+<section class="faq-banner">
+    <div class="overlay"></div>
+    <div class="container banner-content">
+        <h1 class="animate-fade-in">CÂU HỎI THƯỜNG GẶP</h1>
+        <p class="animate-fade-in" style="animation-delay:0.2s">Minh bạch – Rõ ràng – Chuyên nghiệp</p>
+    </div>
+</section>
+
+<main class="faq-main">
+    <div class="container">
+
+        <!-- Tab nhóm câu hỏi -->
+        <section class="faq-groups">
+            <button class="faq-group-btn active" data-group="source">
+                <span class="icon-circle"><i class="fas fa-leaf"></i></span>
+                <span class="label">Nguồn gốc thực phẩm, ATVSTP</span>
+            </button>
+            <button class="faq-group-btn" data-group="meal">
+                <span class="icon-circle"><i class="fas fa-utensils"></i></span>
+                <span class="label">Chất lượng bữa ăn</span>
+            </button>
+            <button class="faq-group-btn" data-group="company">
+                <span class="icon-circle"><i class="fas fa-building"></i></span>
+                <span class="label">Năng lực công ty</span>
+            </button>
+        </section>
+
+        <!-- ACCORDION -->
+        <section class="faq-accordion">
+
+            <!-- NHÓM 1 -->
+            <h2 class="faq-group-title" data-group-heading="source">
+                <i class="fas fa-leaf"></i> Về nguồn gốc thực phẩm, ATTP
+            </h2>
+            <div class="faq-list" data-group-title="source">
+
+                <article class="faq-item" data-group="source">
+                    <button class="faq-question">
+                        <span>Làm sao tôi biết rau củ và thịt cá con tôi ăn hàng ngày là sạch và an toàn?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            HVS tự chủ một phần hệ sinh thái khép kín. Rau từ trang trại Tiên Du (VietGAP), bún/đậu/giò/chả/xúc xích từ
+                            xưởng chế biến của HVS, thịt nhập từ các đối tác uy tín. Để có được điều đó, công ty quản lý chất lượng sản phẩm,
+                            an toàn thực phẩm theo tiêu chuẩn <strong>ISO 22000:2018</strong>. Bên cạnh đó, hệ thống các nhà cung cấp thực phẩm
+                            cho công ty đều có uy tín và được lựa chọn kỹ lưỡng. Tất cả đều có mã QR truy xuất nguồn gốc và chứng nhận kiểm
+                            định định kỳ.
+                        </p>
+                        <p class="faq-links">
+                            <a href="#" class="faq-link"><i class="fas fa-qrcode"></i> Truy xuất nguồn gốc</a>
+                            <a href="#" class="faq-link"><i class="fas fa-handshake"></i> Danh sách các đối tác</a>
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-group="source">
+                    <button class="faq-question">
+                        <span>Quy trình kiểm soát thực phẩm đầu vào của công ty được thực hiện như thế nào?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Nguyên vật liệu, thực phẩm được nhập đầu vào, kiểm tra kĩ lưỡng bởi đội ngũ HVS. Nếu không đạt, hàng sẽ trả về
+                            cho nhà cung cấp. Với nguyên vật liệu đã qua vòng kiểm tra ban đầu, hàng sẽ được nhập vào kho thực phẩm khô,
+                            còn các thực phẩm tươi sẽ được chế biến trong ngày. Đối với công tác chế biến suất ăn tại trường học, công ty
+                            luôn phối hợp với nhà trường và cha mẹ học sinh kiểm tra, giám sát hàng ngày gồm: kiểm tra về chất lượng,
+                            xuất xứ và nguồn gốc thực phẩm, chủng loại. Nhờ sự kiểm soát chặt chẽ, công khai công tác vệ sinh và các
+                            điều kiện về an toàn thực phẩm nên các bữa ăn tại nhà trường luôn bảo đảm nhu cầu dinh dưỡng, góp phần nâng
+                            cao sức khỏe cho học sinh.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-group="source">
+                    <button class="faq-question">
+                        <span>Công ty xử lý thế nào nếu xảy ra nghi ngờ về vệ sinh an toàn thực phẩm?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            HVS thực hiện nghiêm ngặt quy trình lưu mẫu thực phẩm 24h trong tủ lạnh chuyên dụng dưới sự niêm phong của
+                            y tế nhà trường. Đây là bằng chứng pháp lý cao nhất để kiểm chứng chất lượng món ăn. Ngoài ra, công ty cũng
+                            có quy chế xử lí vấn đề về ATTP, được treo thành bảng tại tất cả các bếp ăn của công ty và các bếp ăn tại nhà trường.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-group="source">
+                    <button class="faq-question">
+                        <span>Nhà máy sản xuất bún, phở, đậu, giò chả của công ty có sử dụng chất bảo quản không?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Tuyệt đối không. Do tự chủ nhà máy và vận chuyển ngay trong đêm bằng xe chuyên dụng, sản phẩm của HVS luôn
+                            tươi mới, không cần hóa chất bảo quản để giữ độ tươi.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- NHÓM 2 -->
+            <h2 class="faq-group-title" data-group-heading="meal">
+                <i class="fas fa-utensils"></i> Về chất lượng bữa ăn
+            </h2>
+            <div class="faq-list" data-group-title="meal">
+
+                <article class="faq-item" data-group="meal">
+                    <button class="faq-question">
+                        <span>Thực đơn cho các con được xây dựng dựa trên tiêu chuẩn nào?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Công ty TNHH Hương Việt Sinh liên kết với <strong>Viện Y học Ứng dụng Việt Nam</strong> để xây dựng thực đơn
+                            bữa ăn học đường một cách khoa học theo mùa (mùa hè - mùa đông) đảm bảo cung cấp đủ năng lượng, cân bằng
+                            dinh dưỡng theo từng lứa tuổi các con. Bên cạnh đó, các chuyên viên dinh dưỡng đang làm việc tại công ty
+                            hàng ngày sẽ xây dựng thực đơn đảm bảo đa dạng nguồn thực phẩm, phong phú cách chế biến, giúp các con luôn
+                            thấy hứng thú với bữa trưa tại trường.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-group="meal">
+                    <button class="faq-question">
+                        <span>Các món ăn có được thay đổi thường xuyên để con không bị chán không?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            HVS có bộ thực đơn phong phú với hơn 50 bộ thực đơn khác nhau, cam kết không trùng lặp món chính trong vòng
+                            ít nhất 4 tuần, giúp trẻ luôn cảm thấy hào hứng với bữa ăn.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-group="meal">
+                    <button class="faq-question">
+                        <span>Thức ăn đến tay các con có còn nóng không?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Chúng tôi sử dụng hệ thống tủ giữ nóng thực phẩm và khay nhựa thực phẩm chuyên dụng giữ nhiệt trong suốt quá
+                            trình vận chuyển và chia khay, đảm bảo cơm và canh luôn nóng (trên 60°C) khi đến tay học sinh.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-group="meal">
+                    <button class="faq-question">
+                        <span>Nếu con tôi bị dị ứng với một số loại thực phẩm (như tôm, lạc), công ty có hỗ trợ không?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Phụ huynh vui lòng đăng ký với nhà trường để chúng tôi có thêm thông tin hỗ trợ.
+                        </p>
+                    </div>
+                </article>
+            </div>
+
+            <!-- NHÓM 3 -->
+            <h2 class="faq-group-title" data-group-heading="company">
+                <i class="fas fa-building"></i> Về năng lực công ty
+            </h2>
+            <div class="faq-list" data-group-title="company">
+
+                <article class="faq-item" data-group="company">
+                    <button class="faq-question">
+                        <span>Hương Việt Sinh đã có kinh nghiệm cung cấp suất ăn cho bao nhiêu trường học?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            HVS tự hào là đối tác của hơn 100 trường học tại Hà Nội và Bắc Ninh phục vụ hơn 100.000 suất ăn mỗi ngày
+                            với đội ngũ hơn 1.000 nhân viên bếp chuyên nghiệp.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-group="company">
+                    <button class="faq-question">
+                        <span>Phụ huynh chúng tôi có thể trực tiếp tham quan quy trình sản xuất của công ty không?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            Rất hoan nghênh! HVS chúng tôi thường xuyên tổ chức các buổi tham quan cho Ban đại diện phụ huynh, ban giám
+                            hiệu nhà trường tham quan trang trại tại Bắc Ninh và nhà máy chế biến để tận mắt chứng kiến quy trình sạch
+                            của chúng tôi.
+                        </p>
+                    </div>
+                </article>
+
+                <article class="faq-item" data-group="company">
+                    <button class="faq-question">
+                        <span>Đội ngũ nhân sự của công ty được đào tạo như thế nào?</span>
+                        <i class="fas fa-chevron-down"></i>
+                    </button>
+                    <div class="faq-answer">
+                        <p>
+                            100% nhân viên bếp và nhân viên sơ chế đều được đào tạo về kiến thức ATVSTP, khám sức khỏe định kỳ. Hàng năm,
+                            công ty đều tổ chức "Hội thi tay nghề đầu bếp" để nâng cao kỹ năng chế biến và đổi mới sáng tạo trong văn hóa ẩm thực.
+                        </p>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- CTA gửi câu hỏi -->
+        <section class="faq-cta">
+            <div class="faq-cta-inner">
+                <i class="fas fa-comments faq-cta-icon"></i>
+                <p>Còn thắc mắc? Hãy gửi cho chúng tôi!</p>
+                <a asp-controller="Contact" asp-action="Index" class="btn-faq-contact">
+                    <i class="fas fa-paper-plane"></i> Gửi câu hỏi
+                </a>
+            </div>
+        </section>
+
+    </div>
+</main>
+
+@section Scripts {
+    <script src="~/js/faq.js" asp-append-version="true"></script>
+}

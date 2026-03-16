@@ -1,0 +1,22 @@
+========================================
+  CHẠY ỨNG DỤNG VỚI HOT RELO
+  (Sửa code → F5 trình duyệt → Thấy thay đổi ngay)
+========================================
+
+CÁCH 1 - Nhấn Ctrl+Shift+B (chạy task mặc định)
+   → Chọn "watch" nếu được hỏi
+   → Đợi "Now listening on: http://localhost:5129"
+   → Mở trình duyệt: http://localhost:5129
+
+CÁCH 2 - Terminal
+   cd HuongVietSinh.Web
+   dotnet watch run
+
+CÁCH 3 - Double-click
+   HuongVietSinh.Web/run-watch.bat
+
+----------------------------------------
+QUAN TRỌNG: Phải dùng "dotnet watch run"
+KHÔNG dùng "dotnet run" (sẽ không có hot reload)
+
+Khi sửa code xong → Nhấn F5 trên trình duyệt để xem thay đổi.

@@ -5,5 +5,6 @@ namespace HuongVietSinh.Web.Controllers
     {
         public IActionResult Index() => View();
         public IActionResult Detail() => View();
+        public IActionResult Faq() => View();
     }
 }

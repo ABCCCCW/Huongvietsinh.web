@@ -1,8 +1,14 @@
-/* News pages */
+/* Override brand colors for News section only */
+main,
+.news-banner,
+.breadcrumb {
+    --primary-color: #32471b !important;
+    --secondary-color: #4f6e2b !important;
+}
+
+/* News & FAQ hero banner */
 .news-banner {
-    background-image: url('/image/no-image.png'); /* original: huongvietsinh.com.vn slideshow image */
-    background-size: cover;
-    background-position: center;
+    background: #32471b;
     min-height: 300px;
     position: relative;
     display: flex;
@@ -15,7 +21,7 @@
 .news-banner .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(120deg, rgba(226, 30, 38, 0.82), rgba(180, 20, 28, 0.72));
+    background: linear-gradient(120deg, rgba(50, 71, 27, 0.9), rgba(30, 45, 15, 0.8));
 }
 
 .news-banner .banner-content {
@@ -86,11 +92,51 @@
     box-shadow: var(--shadow-md);
 }
 
-.featured-post img {
+.news-slider {
+    position: relative;
     width: 100%;
     height: 100%;
     min-height: 300px;
+    background: #000;
+}
+
+.news-slider img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    opacity: 0;
+    animation: newsFadeSlider3 15s infinite;
+}
+
+.news-slider .n-slide-1 {
+    animation-delay: 0s;
+}
+
+.news-slider .n-slide-2 {
+    animation-delay: 5s;
+}
+
+.news-slider .n-slide-3 {
+    animation-delay: 10s;
+}
+
+@keyframes newsFadeSlider3 {
+
+    0%,
+    26% {
+        opacity: 1;
+    }
+
+    33%,
+    93% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .featured-content {
@@ -133,18 +179,18 @@
 }
 
 .tag-activity {
-    background: #fdeaea;
-    color: #b81920;
+    background: #eaf1e6;
+    color: #32471b;
 }
 
 .tag-nutrition {
-    background: #fef8e6;
-    color: #9a7b0a;
+    background: #eaf1e6;
+    color: #32471b;
 }
 
 .tag-origin {
-    background: #fdf0f0;
-    color: #e21e26;
+    background: #eaf1e6;
+    color: #32471b;
 }
 
 .category-tabs {
@@ -188,6 +234,7 @@
     text-align: center;
     position: relative;
     padding-bottom: 12px;
+    color: #32471b;
 }
 
 .news-block-title::after {
@@ -195,7 +242,7 @@
     display: block;
     width: 60px;
     height: 3px;
-    background: var(--primary-color);
+    background: #32471b;
     margin: 10px auto 0;
     border-radius: 2px;
 }
@@ -421,15 +468,15 @@
 }
 
 .ad-meal {
-    background: linear-gradient(120deg, #e21e26, #b81920);
+    background: linear-gradient(120deg, #4f6e2b, #32471b);
 }
 
 .ad-event {
-    background: linear-gradient(120deg, #e21e26, #b81920);
+    background: linear-gradient(120deg, #4f6e2b, #32471b);
 }
 
 .ad-food {
-    background: linear-gradient(120deg, #d9a817, #f2be1a);
+    background: linear-gradient(120deg, #4f6e2b, #32471b);
 }
 
 @media (max-width: 992px) {
@@ -468,38 +515,264 @@
 
 /* Large screens */
 @media (min-width: 1400px) {
-    .news-banner { min-height: 340px; }
-    .news-banner h1 { font-size: 2.8rem; }
-    .featured-content h2 { font-size: 1.7rem; }
-    .featured-content p { font-size: 1.02rem; }
-    .featured-post img { min-height: 360px; }
-    .news-title { font-size: 1.12rem; }
-    .news-grid { gap: 26px; }
-    .highlight-item h4 { font-size: 1.08rem; }
-    .post-body h1 { font-size: 2.2rem; }
-    .post-body p { font-size: 1.05rem; }
-    .news-block-title { font-size: 1.7rem; }
+    .news-banner {
+        min-height: 340px;
+    }
+
+    .news-banner h1 {
+        font-size: 2.8rem;
+    }
+
+    .featured-content h2 {
+        font-size: 1.7rem;
+    }
+
+    .featured-content p {
+        font-size: 1.02rem;
+    }
+
+    .featured-post img {
+        min-height: 360px;
+    }
+
+    .news-title {
+        font-size: 1.12rem;
+    }
+
+    .news-grid {
+        gap: 26px;
+    }
+
+    .highlight-item h4 {
+        font-size: 1.08rem;
+    }
+
+    .post-body h1 {
+        font-size: 2.2rem;
+    }
+
+    .post-body p {
+        font-size: 1.05rem;
+    }
+
+    .news-block-title {
+        font-size: 1.7rem;
+    }
 }
 
 @media (min-width: 1920px) {
-    .news-banner { min-height: 400px; }
-    .news-banner h1 { font-size: 3.2rem; }
-    .news-banner p { font-size: 1.3rem; }
-    .featured-content { padding: 32px 28px; }
-    .featured-content h2 { font-size: 1.9rem; }
-    .featured-content p { font-size: 1.1rem; }
-    .featured-post img { min-height: 420px; }
-    .news-title { font-size: 1.2rem; }
-    .news-grid { gap: 30px; }
-    .news-card-content { padding: 18px 18px 22px; }
-    .highlight-item { padding: 20px; }
-    .highlight-item h4 { font-size: 1.15rem; }
-    .post-body { padding: 32px; }
-    .post-body h1 { font-size: 2.5rem; }
-    .post-body p { font-size: 1.1rem; line-height: 1.85; }
-    .post-body h3 { font-size: 1.4rem; }
-    .sidebar-box { padding: 22px; }
-    .sidebar-box h3 { font-size: 1.2rem; }
-    .related-item a { font-size: 1rem; }
-    .news-block-title { font-size: 1.9rem; }
+    .news-banner {
+        min-height: 400px;
+    }
+
+    .news-banner h1 {
+        font-size: 3.2rem;
+    }
+
+    .news-banner p {
+        font-size: 1.3rem;
+    }
+
+    .featured-content {
+        padding: 32px 28px;
+    }
+
+    .featured-content h2 {
+        font-size: 1.9rem;
+    }
+
+    .featured-content p {
+        font-size: 1.1rem;
+    }
+
+    .featured-post img {
+        min-height: 420px;
+    }
+
+    .news-title {
+        font-size: 1.2rem;
+    }
+
+    .news-grid {
+        gap: 30px;
+    }
+
+    .news-card-content {
+        padding: 18px 18px 22px;
+    }
+
+    .highlight-item {
+        padding: 20px;
+    }
+
+    .highlight-item h4 {
+        font-size: 1.15rem;
+    }
+
+    .post-body {
+        padding: 32px;
+    }
+
+    .post-body h1 {
+        font-size: 2.5rem;
+    }
+
+    .post-body p {
+        font-size: 1.1rem;
+        line-height: 1.85;
+    }
+
+    .post-body h3 {
+        font-size: 1.4rem;
+    }
+
+    .sidebar-box {
+        padding: 22px;
+    }
+
+    .sidebar-box h3 {
+        font-size: 1.2rem;
+    }
+
+    .related-item a {
+        font-size: 1rem;
+    }
+
+    .news-block-title {
+        font-size: 1.9rem;
+    }
+}
+
+/* ==========================
+   FAQ PAGE
+   ========================== */
+.faq-groups {
+    margin-top: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    justify-content: center;
+}
+
+.faq-group-btn {
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 14px 18px;
+    min-width: 220px;
+    background: var(--white);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.faq-group-btn .icon-circle {
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    background: #f4f4f4;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+}
+
+.faq-group-btn .label {
+    font-size: 1rem;
+    font-weight: 600;
+}
+
+.faq-group-btn.active,
+.faq-group-btn:hover {
+    background: #fef8e6;
+    border-color: var(--secondary-color);
+}
+
+.faq-accordion {
+    margin-top: 42px;
+}
+
+.faq-list {
+    margin-top: 12px;
+}
+
+.faq-item {
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    background: var(--white);
+    margin-bottom: 14px;
+    overflow: hidden;
+}
+
+.faq-question {
+    width: 100%;
+    text-align: left;
+    padding: 14px 18px;
+    border: none;
+    background: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 1.02rem;
+    font-weight: 700;
+    color: #32471b;
+    /* xanh đậm theo brief */
+}
+
+.faq-question i {
+    transition: transform 0.2s ease;
+}
+
+.faq-item.open .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    padding: 0 18px;
+    transition: max-height 0.25s ease-out, padding 0.25s ease-out;
+}
+
+.faq-item.open .faq-answer {
+    padding: 0 18px 16px;
+}
+
+.faq-answer p {
+    font-size: 1rem;
+    /* >= 16px cho dễ đọc */
+    line-height: 1.75;
+    color: #444;
+    margin-top: 10px;
+}
+
+.faq-link {
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: underline;
+}
+
+.faq-cta {
+    margin: 40px auto 10px;
+    text-align: center;
+    padding: 24px 20px 30px;
+    border-radius: 12px;
+    border: 1px dashed var(--border-color);
+    background: var(--background-light);
+}
+
+.faq-cta p {
+    font-size: 1.05rem;
+    margin-bottom: 12px;
+}
+
+@media (max-width: 768px) {
+    .faq-group-btn {
+        min-width: auto;
+        width: 100%;
+        justify-content: flex-start;
+    }
 }

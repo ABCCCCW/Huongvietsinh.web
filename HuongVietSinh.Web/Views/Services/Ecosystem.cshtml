@@ -1,176 +1,217 @@
 @{
-    ViewData["Title"] = "Hệ Sinh Thái";
+    ViewData["Title"] = "Hệ Sinh Thái Hương Việt Sinh";
 }
 
 @section Styles {
-    <link rel="stylesheet" href="~/css/ecosystem-map.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/ecosystem.css" asp-append-version="true" />
 }
 
-<section class="ecosystem-wrapper">
-    <div class="map-viewport" id="map-viewport">
-        <div class="map-container" id="map-container">
+<!-- HERO BANNER -->
+<section class="eco-hero animate-fade-in">
+    <div class="hero-bg" style="background-image: url('/image/homepage/eco-hero.jpg');"></div>
+    <div class="overlay"></div>
+    <div class="container hero-content">
+        <h1 class="animate-fade-in" style="animation-delay:0.3s">HỆ SINH THÁI HƯƠNG VIỆT SINH</h1>
+        <p class="hero-sapo animate-fade-in" style="animation-delay:0.6s">
+            "Với diện tích canh tác chuẩn VietGAP gần <strong>45 hecta</strong> và hệ thống nhà xưởng hiện đại,
+            Hương Việt Sinh tự hào kiểm soát trọn vẹn hành trình từ nông trại đến bàn ăn."
+        </p>
+    </div>
+</section>
 
-            <!-- ===== SKY ===== -->
-            <div class="sun"></div>
-            <div class="cloud cloud-1" style="top: 25px; left: 80px;"><div class="cloud-body"></div></div>
-            <div class="cloud cloud-2" style="top: 85px; left: 550px;"><div class="cloud-body"></div></div>
-            <div class="cloud cloud-3" style="top: 15px; left: 1300px;"><div class="cloud-body"></div></div>
-            <div class="cloud cloud-1" style="top: 95px; left: 2100px;"><div class="cloud-body"></div></div>
-            <div class="cloud cloud-2" style="top: 40px; left: 2700px;"><div class="cloud-body"></div></div>
-
-            <!-- ===== GROUND ===== -->
-            <div class="ground"></div>
-
-            <!-- ===== RIVER ===== -->
-            <div class="river"></div>
-
-            <!-- ===== ROADS ===== -->
-            <div class="road road-h" style="bottom: 40%; left: 3%; width: 92%;"></div>
-            <div class="road road-v" style="bottom: 12%; left: 14%; height: 28%;"></div>
-            <div class="road road-v" style="bottom: 12%; left: 80%; height: 28%;"></div>
-
-            <!-- ===== BRIDGE ===== -->
-            <div class="bridge" style="bottom: calc(40% - 5px); left: calc(48% - 15px);">
-                <div class="bridge-railing">
-                    <div class="bridge-post"></div><div class="bridge-post"></div>
-                    <div class="bridge-post"></div><div class="bridge-post"></div>
-                    <div class="bridge-post"></div><div class="bridge-post"></div>
-                    <div class="bridge-post"></div><div class="bridge-post"></div>
-                </div>
-                <div class="bridge-deck"></div>
-            </div>
-
-            <!-- ===== 3D FARM BUILDING ===== -->
-            <div class="iso-bldg bldg-farm" style="bottom: 44%; left: 3%;">
-                <div class="iso-top"></div>
-                <div class="iso-front"></div>
-                <div class="iso-right"></div>
-                <span class="bldg-farm-label">🚜 NÔNG TRẠI VIETGAP</span>
-            </div>
-
-            <!-- Greenhouse -->
-            <div class="greenhouse" style="bottom: 56%; left: 27%;">
-                <div class="greenhouse-body"></div>
-            </div>
-
-            <!-- Crop rows -->
-            <div class="crop-rows" style="bottom: 22%; left: 5%;">
-                <div class="crop-row">
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                </div>
-                <div class="crop-row">
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                </div>
-                <div class="crop-row">
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                </div>
-                <div class="crop-row">
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
-                    <div class="crop"></div><div class="crop"></div><div class="crop"></div>
+<!-- STAT BAR - 45 hecta visualization -->
+<section class="eco-stats">
+    <div class="container">
+        <div class="stats-grid reveal">
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-map-marked-alt"></i></div>
+                <div class="stat-number" data-target="45">0</div>
+                <div class="stat-unit">hecta</div>
+                <div class="stat-label">Diện tích canh tác VietGAP</div>
+                <div class="stat-compare">
+                    <i class="fas fa-futbol"></i> Tương đương <strong>63</strong> sân bóng đá
                 </div>
             </div>
-
-            <!-- ===== 3D FACTORY BUILDING ===== -->
-            <div class="iso-bldg bldg-factory" style="bottom: 44%; left: 30%;">
-                <div class="iso-top"></div>
-                <div class="iso-front"></div>
-                <div class="iso-right"></div>
-                <span class="bldg-factory-label">🏭 NHÀ MÁY CHẾ BIẾN HVS</span>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-school"></i></div>
+                <div class="stat-number" data-target="100">0</div>
+                <div class="stat-unit">+</div>
+                <div class="stat-label">Trường học đối tác</div>
             </div>
-            <div class="factory-logo" style="bottom: calc(44% + 100px); left: calc(30% + 230px);">HVS</div>
-
-            <!-- Chimneys -->
-            <div class="chimney" style="bottom: calc(44% + 235px); left: 34%;">
-                <div class="chimney-smoke"></div>
-                <div class="chimney-smoke"></div>
-                <div class="chimney-smoke"></div>
-                <div class="chimney-body"></div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-users"></i></div>
+                <div class="stat-number" data-target="1000">0</div>
+                <div class="stat-unit">+</div>
+                <div class="stat-label">Nhân viên bếp chuyên nghiệp</div>
             </div>
-            <div class="chimney" style="bottom: calc(44% + 235px); left: 38%;">
-                <div class="chimney-smoke"></div>
-                <div class="chimney-smoke"></div>
-                <div class="chimney-body"></div>
+            <div class="stat-card">
+                <div class="stat-icon"><i class="fas fa-utensils"></i></div>
+                <div class="stat-number" data-target="100000">0</div>
+                <div class="stat-unit">+</div>
+                <div class="stat-label">Suất ăn mỗi ngày</div>
             </div>
-
-            <!-- ===== 3D SCHOOL / CANTEEN BUILDING ===== -->
-            <div class="iso-bldg bldg-school" style="bottom: 44%; left: 60%;">
-                <div class="iso-top"></div>
-                <div class="iso-front"></div>
-                <div class="iso-right"></div>
-                <span class="bldg-school-label">🏫 BẾP ĂN TRƯỜNG HỌC</span>
-            </div>
-
-            <!-- ===== TREES (mixed styles) ===== -->
-            <div class="tree" style="bottom: 58%; left: 1.5%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 63%; left: 9%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 50%; left: 26%;"><div class="tree-top-pine"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 18%; left: 22%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 14%; left: 52%;"><div class="tree-top-pine"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 53%; left: 56%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 60%; left: 87%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 22%; left: 88%;"><div class="tree-top-pine"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 16%; left: 70%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 32%; left: 94%;"><div class="tree-top-pine"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 65%; left: 45%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
-            <div class="tree" style="bottom: 10%; left: 38%;"><div class="tree-top"></div><div class="tree-trunk"></div></div>
-
-            <!-- ===== SIGNS ===== -->
-            <div class="map-sign" style="bottom: 47%; left: 13%;">KHU VỰC NÔNG TRẠI</div>
-            <div class="map-sign" style="bottom: 74%; left: 40%;">KHU CHẾ BIẾN THỰC PHẨM</div>
-            <div class="map-sign" style="bottom: 47%; left: 72%;">KHU VỰC PHÂN PHỐI</div>
-
-            <!-- ===== VEHICLES ===== -->
-            <div class="vehicle vehicle-truck">HVS</div>
-            <div class="vehicle vehicle-plane">✈️</div>
-
-            <!-- ===== HOTSPOTS ===== -->
-            <div class="hotspot" style="bottom: 58%; left: 15%;"
-                 data-title="Nông Trại VietGAP"
-                 data-desc="Vùng trồng rau sạch an toàn tuyệt đối theo tiêu chuẩn VietGAP. Tuân thủ nghiêm ngặt quy trình tưới tiêu, bón phân hữu cơ. Cung cấp nguồn nguyên liệu tươi sạch cho toàn bộ chuỗi chế biến.">
-                <div class="hotspot-icon"><i class="fas fa-leaf"></i></div>
-                <div class="hotspot-label">Nông Trại VietGAP</div>
-            </div>
-
-            <div class="hotspot" style="bottom: 58%; left: 43%;"
-                 data-title="Nhà Máy Chế Biến HVS"
-                 data-desc="Nhà máy sơ chế và sản xuất thực phẩm khép kín. Nơi cho ra đời các sản phẩm Giò Chả, Ruốc đạt chuẩn OCOP 4 sao và bún phở sạch. Quy trình sản xuất hiện đại, đảm bảo ATTP.">
-                <div class="hotspot-icon"><i class="fas fa-industry"></i></div>
-                <div class="hotspot-label">Nhà Máy Chế Biến</div>
-            </div>
-
-            <div class="hotspot" style="bottom: 58%; left: 73%;"
-                 data-title="Bếp Ăn Công Nghiệp"
-                 data-desc="Hệ thống cung cấp suất ăn quy mô lớn cho trường học, bệnh viện, doanh nghiệp. Đảm bảo vệ sinh an toàn thực phẩm tuyệt đối từ khâu nguyên liệu đến bàn ăn.">
-                <div class="hotspot-icon"><i class="fas fa-utensils"></i></div>
-                <div class="hotspot-label">Bếp Ăn Công Nghiệp</div>
-            </div>
-
         </div>
     </div>
 </section>
 
-<!-- MODAL OVERLAY -->
-<div class="map-modal" id="ecosystemModal">
-    <div class="modal-content">
-        <div class="modal-header">
-            <h3 id="modal-title">Tiêu đề</h3>
-            <button class="modal-close">&times;</button>
+<!-- MAP - Interactive illustrated map -->
+<section class="eco-map-section">
+    <div class="container">
+        <h2 class="section-title reveal">Bản đồ hệ sinh thái</h2>
+        <p class="section-subtitle reveal">Nhấn vào từng điểm để khám phá chi tiết</p>
+
+        <div class="eco-map-wrapper reveal">
+            <div class="eco-map" id="ecoInteractiveMap">
+                <video class="map-video" autoplay loop muted playsinline>
+                    <source src="/image/homepage/demo-map.mp4" type="video/mp4">
+                    <!-- Fallback image -->
+                    <img src="/image/homepage/hvs_ecosystem_map.png" alt="Bản đồ hệ sinh thái Hương Việt Sinh">
+                </video>
+            </div>
         </div>
-        <div class="modal-body"></div>
     </div>
-</div>
+</section>
+
+<!-- ZONE DETAILS -->
+<section class="eco-zones">
+    <div class="container">
+
+        <!-- Zone 1: Rau an toàn -->
+        <div class="zone-block zone-active reveal" id="zone-bacninh" data-zone="bacninh">
+            <div class="zone-visual">
+                <div class="zone-img-wrap">
+                    <img src="/image/homepage/eco-bacninh.jpg" alt="Vùng trồng rau an toàn" class="zone-img">
+                    <div class="zone-badge">
+                        <i class="fas fa-certificate"></i> VietGAP
+                    </div>
+                </div>
+            </div>
+            <div class="zone-content">
+                <span class="zone-tag"><i class="fas fa-seedling"></i> Vùng nguyên liệu</span>
+                <h3 class="zone-title">Vùng sản xuất rau an toàn</h3>
+                <p class="zone-desc">
+                    Công ty đã đầu tư xây dựng <strong>04 vùng trồng rau an toàn</strong> theo tiêu chuẩn VietGAP với diện tích
+                    đến nay gần <strong>45 hecta</strong> tại tỉnh Bắc Ninh, quận Long Biên (TP Hà Nội) và tại Mộc Châu, Sơn La.
+                </p>
+                <p class="zone-desc">
+                    Tất cả các vùng đã được Trung tâm chứng nhận phù hợp (QUACERT) trực thuộc Tổng cục Đo lường chất lượng
+                    đánh giá cấp Giấy chứng nhận sản phẩm, được sản xuất theo quy trình VietGAP và được đánh giá định kỳ hàng năm.
+                </p>
+                <div class="zone-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Bắc Ninh, Long Biên, Mộc Châu</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-ruler-combined"></i>
+                        <span>45 hecta canh tác</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-award"></i>
+                        <span>Chứng nhận QUACERT</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Zone 2: Đậu phụ, bún, phở -->
+        <div class="zone-block zone-reverse reveal" id="zone-factory1" data-zone="bacninh">
+            <div class="zone-visual">
+                <div class="zone-img-wrap img-slider">
+                    <img src="/image/homepage/eco-factory-1.jpg" alt="Xưởng sản xuất bún, bánh phở tươi 1" class="zone-img slide-1">
+                    <img src="/image/homepage/eco-factory-2.jpg" alt="Xưởng sản xuất bún, bánh phở tươi 2" class="zone-img slide-2">
+                    <div class="zone-badge zone-badge-blue">
+                        <i class="fas fa-shield-alt"></i> An toàn
+                    </div>
+                </div>
+            </div>
+            <div class="zone-content">
+                <span class="zone-tag tag-blue"><i class="fas fa-industry"></i> Nhà xưởng</span>
+                <h3 class="zone-title">Xưởng sản xuất đậu phụ, giá đỗ, bún, bánh phở tươi</h3>
+                <p class="zone-desc">
+                    Sự an lành của mỗi bữa ăn bắt đầu từ những nguyên liệu mộc mạc và thuần khiết nhất. Tại xưởng sản xuất
+                    đặt tại phường Khắc Niệm, thành phố Bắc Ninh, Hương Việt Sinh chủ động vận hành dây chuyền sản xuất đậu phụ,
+                    giá đỗ, bún và bánh phở tươi theo tiêu chuẩn hiện đại.
+                </p>
+                <div class="zone-production">
+                    <div class="prod-item">
+                        <span class="prod-value">2+ tấn/ngày</span>
+                        <span class="prod-label">Đậu phụ</span>
+                    </div>
+                    <div class="prod-item">
+                        <span class="prod-value">30 tấn/tháng</span>
+                        <span class="prod-label">Bún, phở</span>
+                    </div>
+                    <div class="prod-item">
+                        <span class="prod-value">30 tấn/tháng</span>
+                        <span class="prod-label">Giá đỗ</span>
+                    </div>
+                </div>
+                <p class="zone-desc">
+                    Công ty cam kết <strong class="text-danger">không sử dụng bất kỳ loại phụ gia thực phẩm nào</strong>, giữ trọn hương vị tự nhiên
+                    và đảm bảo an toàn tuyệt đối cho sức khỏe người tiêu dùng. Với chứng nhận cơ sở đủ điều kiện từ ban quản lý
+                    an toàn thực phẩm tỉnh Bắc Ninh, chúng tôi tự hào là người đồng hành tin cậy.
+                </p>
+            </div>
+        </div>
+
+        <!-- Zone 3: Giò, chả, xúc xích -->
+        <div class="zone-block reveal" id="zone-hanoi" data-zone="hanoi">
+            <div class="zone-visual">
+                <div class="zone-img-wrap img-slider">
+                    <img src="/image/homepage/eco-factory-3.jpg" alt="Xưởng chế biến thực phẩm giò, chả 1" class="zone-img slide-1">
+                    <img src="/image/homepage/eco-factory-4.jpg" alt="Xưởng chế biến thực phẩm giò, chả 2" class="zone-img slide-2">
+                    <div class="zone-badge zone-badge-gold">
+                        <i class="fas fa-star"></i> Chất lượng
+                    </div>
+                </div>
+            </div>
+            <div class="zone-content">
+                <span class="zone-tag tag-gold"><i class="fas fa-mortar-pestle"></i> Chế biến</span>
+                <h3 class="zone-title">Xưởng chế biến thực phẩm (giò, chả, xúc xích)</h3>
+                <p class="zone-desc">
+                    Tọa lạc tại phường Phúc Lợi, quận Long Biên, xưởng chế biến thực phẩm của Hương Việt Sinh là nơi tạo nên
+                    những dòng giò, chả và xúc xích với chất lượng vượt trội. Chúng tôi ưu tiên sử dụng mỡ phần (mỡ lợn tự nhiên)
+                    trong công thức chế biến, bởi đây là nguồn dưỡng chất quan trọng giúp cung cấp năng lượng và hỗ trợ sự phát triển
+                    toàn diện của trẻ nhỏ.
+                </p>
+                <p class="zone-desc">
+                    Mỗi sản phẩm không chỉ đậm đà hương vị truyền thống mà còn được cam kết <strong>an toàn tuyệt đối</strong>
+                    cho người sử dụng, góp phần mang lại những bữa ăn an lành và đầy đủ dinh dưỡng mỗi ngày.
+                </p>
+                <div class="zone-highlights">
+                    <div class="highlight-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span>Phúc Lợi, Long Biên, Hà Nội</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-leaf"></i>
+                        <span>Mỡ lợn tự nhiên, không phụ gia</span>
+                    </div>
+                    <div class="highlight-item">
+                        <i class="fas fa-check-circle"></i>
+                        <span>An toàn tuyệt đối</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="eco-cta">
+    <div class="container">
+        <div class="cta-inner reveal">
+            <h3>Bạn muốn tìm hiểu thêm?</h3>
+            <p>Liên hệ ngay để đăng ký tham quan hệ sinh thái Hương Việt Sinh</p>
+            <a asp-controller="Contact" asp-action="Index" class="btn-eco-cta">
+                <i class="fas fa-calendar-check"></i> Đăng ký tham quan
+            </a>
+        </div>
+    </div>
+</section>
 
 @section Scripts {
-    <script src="~/js/ecosystem-map.js" asp-append-version="true"></script>
+    <script src="~/js/ecosystem.js" asp-append-version="true"></script>
 }

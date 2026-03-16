@@ -1,0 +1,24 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "Chạy với Hot Reload",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "dotnet",
+      "args": ["watch", "run", "--project", "${workspaceFolder}/HuongVietSinh.Web/HuongVietSinh.Web.csproj"],
+      "cwd": "${workspaceFolder}/HuongVietSinh.Web",
+      "stopAtEntry": false,
+      "console": "integratedTerminal"
+    },
+    {
+      "name": "Chạy thường (không Hot Reload)",
+      "type": "coreclr",
+      "request": "launch",
+      "program": "${workspaceFolder}/HuongVietSinh.Web/bin/Debug/net8.0/HuongVietSinh.Web.dll",
+      "cwd": "${workspaceFolder}/HuongVietSinh.Web",
+      "stopAtEntry": false,
+      "console": "integratedTerminal"
+    }
+  ]
+}

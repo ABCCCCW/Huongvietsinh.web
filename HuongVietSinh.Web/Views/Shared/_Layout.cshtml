@@ -1,10 +1,15 @@
+@inject Microsoft.AspNetCore.Hosting.IWebHostEnvironment Env
 <!DOCTYPE html>
 <html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    @if (Env.IsDevelopment())
+    {
+        <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    }
     <title>@ViewData["Title"] - Hương Việt Sinh</title>
-    <link rel="stylesheet" href="~/css/common.css">
+    <link rel="stylesheet" href="~/css/common.css" asp-append-version="true">
     @await RenderSectionAsync("Styles", required: false)
     <link rel="icon" type="image/png" href="~/image/favicon.png">
 </head>
@@ -13,17 +18,42 @@
     <header class="main-header">
         <div class="container">
             <a asp-controller="Home" asp-action="Index" class="brand-logo">
-                <img src="~/image/logo.png" alt="Hương Việt Sinh" style="max-height:50px;margin-right:10px;">
-                <span style="font-weight:700;font-size:20px;color:#e21e26;">HƯƠNG VIỆT SINH</span>
+                <img src="~/image/logo.png" alt="Hương Việt Sinh" class="logo-img">
+                <span class="logo-text">HƯƠNG VIỆT SINH</span>
             </a>
             <button class="mobile-toggle"><i class="fas fa-bars"></i></button>
-            <nav class="nav-menu">
-                <a asp-controller="Home" asp-action="About" class="nav-link">Về chúng tôi</a>
-                <a asp-controller="Services" asp-action="Ecosystem" class="nav-link">Hệ sinh thái</a>
-                <a asp-controller="Services" asp-action="Index" class="nav-link">Dịch vụ</a>
-                <a asp-controller="News" asp-action="Index" class="nav-link">Tin tức</a>
-                <a asp-controller="Contact" asp-action="Index" class="nav-link">Liên hệ</a>
-            </nav>
+            <div class="nav-actions">
+                <nav class="nav-menu">
+                    <div class="nav-item has-dropdown">
+                        <a asp-controller="Home" asp-action="About" class="nav-link">Về chúng tôi <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a href="#">Tầm nhìn & Sứ mệnh</a>
+                            <a href="#">Lịch sử hình thành</a>
+                            <a href="#">Đội ngũ nhân sự</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a asp-controller="Services" asp-action="Ecosystem" class="nav-link">Hệ sinh thái</a>
+                    </div>
+                    <div class="nav-item has-dropdown">
+                        <a asp-controller="Services" asp-action="Index" class="nav-link">Dịch vụ <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-menu">
+                            <a asp-controller="Services" asp-action="Catering">Suất ăn công nghiệp</a>
+                            <a asp-controller="Services" asp-action="Events">Tổ chức sự kiện</a>
+                            <a asp-controller="Services" asp-action="Products">Thực phẩm OCOP</a>
+                        </div>
+                    </div>
+                    <div class="nav-item">
+                        <a asp-controller="News" asp-action="Index" class="nav-link">Tin tức</a>
+                    </div>
+                    <div class="nav-item">
+                        <a asp-controller="Contact" asp-action="Index" class="nav-link">Liên hệ</a>
+                    </div>
+                </nav>
+                <div class="lang-toggle">
+                    <span class="active">VN</span> | <span>EN</span>
+                </div>
+            </div>
         </div>
     </header>
 
@@ -34,7 +64,7 @@
             <div class="footer-grid">
                 <div class="footer-col footer-info">
                     <h4>CÔNG TY TNHH HƯƠNG VIỆT SINH</h4>
-                    <p>Địa chỉ: Lô BT1, ngõ 191, Phúc Lợi, Long Biên, Hà Nội</p>
+                    <p>Địa chỉ: Lô BT1, ngõ 191, đường Phúc Lợi, Phường Phúc Lợi, Quận Long Biên, Thành phố Hà Nội</p>
                     <p>Hỗ trợ: 0963 826 668</p>
                     <p>Email: info@huongvietsinh.com.vn</p>
                 </div>
@@ -42,12 +72,13 @@
                     <h4>TẦM NHÌN DÀI HẠN</h4>
                     <p><a asp-controller="Home" asp-action="Index">Dự án mở rộng vùng trồng</a></p>
                     <p><a asp-controller="Home" asp-action="Index">Dự án Chuyển đổi số</a></p>
-                    <p><a asp-controller="Home" asp-action="Index">Năng lực công ty</a></p>
+                    <p><a asp-controller="Home" asp-action="Index">Chuẩn hóa Bò Úc nhập khẩu</a></p>
                 </div>
                 <div class="footer-col footer-links">
                     <h4>GIẢI ĐÁP</h4>
-                    <p><a asp-controller="Services" asp-action="Products">Nguồn gốc và An toàn thực phẩm</a></p>
-                    <p><a asp-controller="Services" asp-action="Catering">Chất lượng bữa ăn</a></p>
+                    <p><a href="/News/Faq#source">Nguồn gốc và An toàn thực phẩm</a></p>
+                    <p><a href="/News/Faq#meal">Chất lượng bữa ăn</a></p>
+                    <p><a href="/News/Faq#company">Năng lực công ty</a></p>
                 </div>
                 <div class="footer-col footer-links">
                     <h4>HỖ TRỢ TẬN TÂM</h4>
@@ -61,7 +92,7 @@
         </div>
     </footer>
 
-    <script src="~/js/common.js"></script>
+    <script src="~/js/common.js" asp-append-version="true"></script>
     @await RenderSectionAsync("Scripts", required: false)
 </body>
 </html>

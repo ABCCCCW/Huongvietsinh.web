@@ -1,130 +1,69 @@
-/* ==========================================
-   TRANG CHỦ - JAVASCRIPT
-   Hiệu ứng: Counter, Scroll Reveal, Parallax
-   ========================================== */
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener("DOMContentLoaded", () => {
+    /* ─── HERO SLIDER ─── */
+    const slides = document.querySelectorAll(".hero-slide");
+    const dots = document.querySelectorAll(".hero-nav-dot");
+    if (slides.length) {
+        let idx = 0;
+        let timer;
 
-    // ========== SCROLL REVEAL ==========
-    const revealElements = document.querySelectorAll('.reveal, .reveal-left, .reveal-right');
+        function show(i) {
+            idx = (i + slides.length) % slides.length;
+            slides.forEach((s, k) => s.classList.toggle("active", k === idx));
+            dots.forEach((d, k) => d.classList.toggle("active", k === idx));
+        }
 
-    const revealObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                // Thêm delay nếu có
-                const delay = entry.target.style.transitionDelay || '0s';
-                entry.target.style.transitionDelay = delay;
-                entry.target.classList.add('revealed');
-                revealObserver.unobserve(entry.target);
-            }
-        });
-    }, {
-        threshold: 0.15,
-        rootMargin: '0px 0px -40px 0px'
-    });
+        function next() { show(idx + 1); }
 
-    revealElements.forEach(el => revealObserver.observe(el));
+        dots.forEach((d, i) => d.addEventListener("click", () => {
+            show(i);
+            clearInterval(timer);
+            timer = setInterval(next, 5000);
+        }));
 
+        timer = setInterval(next, 5000);
 
-    // ========== COUNTER ANIMATION ==========
-    const counters = document.querySelectorAll('.counter');
-    let countersAnimated = false;
-
-    const counterObserver = new IntersectionObserver((entries) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting && !countersAnimated) {
-                countersAnimated = true;
-                animateCounters();
-                counterObserver.unobserve(entry.target);
-            }
-        });
-    }, { threshold: 0.3 });
-
-    const statsBar = document.querySelector('.stats-bar');
-    if (statsBar) {
-        counterObserver.observe(statsBar);
+        const hero = document.querySelector(".home-hero");
+        if (hero) {
+            hero.addEventListener("mouseenter", () => clearInterval(timer));
+            hero.addEventListener("mouseleave", () => { timer = setInterval(next, 5000); });
+        }
     }
 
-    function animateCounters() {
-        counters.forEach(counter => {
-            const target = parseInt(counter.getAttribute('data-target'));
-            const duration = 2000; // 2 giây
-            const startTime = performance.now();
+    /* ─── SCROLL-TRIGGERED REVEAL ─── */
+    const revealElements = document.querySelectorAll(".reveal, .reveal-children");
 
-            function updateCounter(currentTime) {
-                const elapsed = currentTime - startTime;
-                const progress = Math.min(elapsed / duration, 1);
-
-                // Easing function (ease-out)
-                const eased = 1 - Math.pow(1 - progress, 3);
-                const current = Math.round(eased * target);
-
-                // Format số với dấu chấm phân cách
-                counter.textContent = formatNumber(current);
-
-                if (progress < 1) {
-                    requestAnimationFrame(updateCounter);
+    if (revealElements.length) {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add("visible");
+                    // Don't unobserve so we can re-trigger if needed
                 }
-            }
-
-            requestAnimationFrame(updateCounter);
+            });
+        }, {
+            threshold: 0.15,
+            rootMargin: "0px 0px -50px 0px"
         });
+
+        revealElements.forEach(el => revealObserver.observe(el));
     }
 
-    function formatNumber(num) {
-        if (num >= 1000) {
-            return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
-        }
-        return num.toString();
-    }
+    /* ─── ECOSYSTEM SCROLL ANIMATION ─── */
+    const ecoMap = document.getElementById("ecoMap");
 
-
-    // ========== HEADER SCROLL EFFECT ==========
-    const header = document.querySelector('.main-header');
-    let lastScroll = 0;
-
-    window.addEventListener('scroll', () => {
-        const currentScroll = window.pageYOffset;
-
-        if (currentScroll > 100) {
-            header.style.boxShadow = '0 4px 20px rgba(0,0,0,0.1)';
-        } else {
-            header.style.boxShadow = 'var(--shadow-sm)';
-        }
-
-        lastScroll = currentScroll;
-    }, { passive: true });
-
-
-    // ========== PARALLAX HERO PARTICLES ==========
-    const heroSection = document.querySelector('.hero');
-    const particles = document.querySelectorAll('.hero-particle');
-
-    if (heroSection && particles.length > 0) {
-        window.addEventListener('scroll', () => {
-            const scrolled = window.pageYOffset;
-            const heroHeight = heroSection.offsetHeight;
-
-            if (scrolled <= heroHeight) {
-                const ratio = scrolled / heroHeight;
-                particles.forEach((p, i) => {
-                    const speed = (i % 3 + 1) * 0.3;
-                    p.style.transform = `translateY(${scrolled * speed}px)`;
-                });
-            }
-        }, { passive: true });
-    }
-
-
-    // ========== SMOOTH SCROLL FOR HERO ARROW ==========
-    const heroScroll = document.querySelector('.hero-scroll');
-    if (heroScroll) {
-        heroScroll.addEventListener('click', () => {
-            const statsSection = document.querySelector('.stats-section');
-            if (statsSection) {
-                statsSection.scrollIntoView({ behavior: 'smooth' });
-            }
+    if (ecoMap) {
+        const ecoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    ecoMap.classList.add("active");
+                } else {
+                    ecoMap.classList.remove("active");
+                }
+            });
+        }, {
+            threshold: 0.3
         });
-        heroScroll.style.cursor = 'pointer';
-    }
 
+        ecoObserver.observe(ecoMap);
+    }
 });

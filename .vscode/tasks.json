@@ -1,0 +1,30 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "watch",
+      "command": "dotnet",
+      "type": "process",
+      "args": ["watch", "run", "--project", "${workspaceFolder}/HuongVietSinh.Web/HuongVietSinh.Web.csproj"],
+      "problemMatcher": {
+        "owner": "dotnet",
+        "pattern": { "regexp": "^(.*)$" },
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": "Building",
+          "endsPattern": "Now listening on:"
+        }
+      },
+      "isBackground": true,
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "dedicated",
+        "showReuseMessage": false
+      }
+    }
+  ]
+}
