@@ -340,7 +340,7 @@
 }
 
 .zone-desc strong {
-    color: #e21e26;
+    font-weight: 700;
 }
 
 /* Production stats */
